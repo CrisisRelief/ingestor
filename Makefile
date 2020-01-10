@@ -9,7 +9,7 @@ install_reqs_dev:
 install_reqs:
 	pip install -r requirements.txt
 
-lint: install_reqs_dev
+lint:
 	flake8
 	yamllint .
 
