@@ -3,13 +3,15 @@ import os
 import shlex
 import sys
 
+import pandas as pd
+
 from . import REPO_ROOT, TEST_DATA
 
 try:
     PATH = sys.path
     sys.path.append(REPO_ROOT)
 
-    from ingestion.core import parse_args, parse_config
+    from ingestion.core import parse_args, parse_config, transform_df_to_pre_json
 finally:
     sys.path = PATH
 
@@ -45,3 +47,20 @@ class TestCore:
         result = parse_config(dummy_config_file)
 
         assert expected == result
+
+    def test_transform_df_row_to_json(self):
+        schema_mapping = {
+            'corge': 'grault',
+            'garply': 'waldo'
+        }
+        df_in = pd.DataFrame([
+            ['a', 'b', 'c'], ['d', 'e', 'f']
+        ], columns=['foo', 'waldo', 'grault'])
+        expected = [
+            {'corge': 'c', 'garply': 'b'},
+            {'corge': 'f', 'garply': 'e'},
+        ]
+
+        transformed = transform_df_to_pre_json(df_in, schema_mapping)
+
+        assert expected == transformed
