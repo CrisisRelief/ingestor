@@ -36,3 +36,16 @@ class TestSheets(object):
         result = sheet.get_worksheet_df('bar', 1)
 
         assert expected.equals(result)
+
+    def test_get_worksheet_df_adds_constants(self):
+        expected = pd.DataFrame({
+            'actual': ['1', '4'],
+            'header': ['2', '5'],
+            'row': ['3', '6'],
+            'extra': ['const', 'const']
+        })
+
+        sheet = Sheet(self.mock_creds, 'foo')
+        result = sheet.get_worksheet_df('bar', 1, {'extra': 'const'})
+
+        assert expected.equals(result)

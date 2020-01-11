@@ -1,5 +1,5 @@
-import pandas as pd
 import gspread
+import pandas as pd
 from gspread.exceptions import WorksheetNotFound
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -15,7 +15,7 @@ class Sheet:
     def __init__(self, gc, spreadsheet_key):
         self.sheet = gc.open_by_key(spreadsheet_key)
 
-    def get_worksheet_df(self, name, header_row=0):
+    def get_worksheet_df(self, name, header_row=0, constants=None):
         try:
             cells = self.sheet.worksheet(name).get_all_values()
         except WorksheetNotFound:
@@ -26,4 +26,10 @@ class Sheet:
             raise UserWarning(f"worksheet {name} not found. Options: {sheet_names}")
 
         headers = cells[header_row]
-        return pd.DataFrame(cells[header_row + 1:], columns=headers)
+        rows = cells[header_row + 1:]
+        if constants:
+            headers += list(constants.keys())
+            rows = [
+                row + list(constants.values()) for row in rows
+            ]
+        return pd.DataFrame(rows, columns=headers)

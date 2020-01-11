@@ -28,7 +28,8 @@ def main(args):
 
     sheet = Sheet(gc, conf['spreadsheet_key'])
     for worksheet_spec in conf['worksheets']:
-        frame = sheet.get_worksheet_df(worksheet_spec['name'], 6)
+        frame = sheet.get_worksheet_df(worksheet_spec['name'], 6,
+                                       {'__CATEGORY': worksheet_spec['category']})
         __import__('pdb').set_trace()
         print(frame)
 
