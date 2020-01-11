@@ -25,10 +25,7 @@ def parse_args(argv):
 
 
 def transform_df_record_to_pre_json(record, schema_mapping):
-    return dict([
-        (key, record.get(value)) for key, value in
-        schema_mapping.items()
-    ])
+    return dict([(key, record.get(value)) for key, value in schema_mapping.items()])
 
 
 def transform_df_to_pre_json(frame, schema_mapping):
@@ -42,8 +39,9 @@ def main(args):
     gc = authorize_creds(args.creds_file)
     sheet = Sheet(gc, conf['spreadsheet_key'])
     aggregate = pd.concat([
-        sheet.get_worksheet_df(worksheet_spec['name'], 6,
-                               {'__CATEGORY': worksheet_spec['category']})
+        sheet.get_worksheet_df(
+            worksheet_spec['name'], 6,
+            {'__CATEGORY': worksheet_spec.get('category', worksheet_spec['name'])})
         for worksheet_spec in conf['worksheets']
     ],
                           axis=0)
