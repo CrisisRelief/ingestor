@@ -27,9 +27,11 @@ class Sheet:
 
         headers = cells[header_row]
         rows = cells[header_row + 1:]
+        extra_cells = []
         if constants:
             headers += list(constants.keys())
-            rows = [
-                row + list(constants.values()) for row in rows
-            ]
+            extra_cells = list(constants.values())
+        rows = [
+            row + extra_cells for row in rows if any(row)
+        ]
         return pd.DataFrame(rows, columns=headers)

@@ -49,3 +49,23 @@ class TestSheets(object):
         result = sheet.get_worksheet_df('bar', 1, {'extra': 'const'})
 
         assert expected.equals(result)
+
+    def test_get_worksheet_df_ignores_blanks(self):
+        mock_worksheet = MagicMock()
+        mock_worksheet.get_all_values.return_value = [
+            ['crap', 'above', 'header'],
+            ['actual', 'header', 'row'],
+            ['1', '2', '3'],
+            ['4', '5', '6'],
+            ['', '', ''],
+        ]
+        mock_sheet = MagicMock(spec=gspread.Spreadsheet)
+        mock_sheet.worksheet.return_value = mock_worksheet
+        mock_creds = MagicMock()
+        mock_creds.open_by_key.return_value = mock_sheet
+        expected = pd.DataFrame({'actual': ['1', '4'], 'header': ['2', '5'], 'row': ['3', '6']})
+
+        sheet = Sheet(mock_creds, 'foo')
+        result = sheet.get_worksheet_df('bar', 1)
+
+        assert expected.equals(result)
