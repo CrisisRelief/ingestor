@@ -21,9 +21,10 @@ class TestCore:
         expected = argparse.Namespace(
             creds_file='foo.json',
             config_file='bar.yml',
-            output_file='baz.json'
+            output_file='baz.json',
+            limit='10'
         )
-        argv = shlex.split('--creds-file foo.json --config-file bar.yml --output-file baz.json')
+        argv = shlex.split('--creds-file foo.json --config-file bar.yml --output-file baz.json --limit 10')
 
         result = parse_args(argv)
 

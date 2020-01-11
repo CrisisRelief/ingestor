@@ -1,5 +1,6 @@
 import argparse
 import sys
+import json
 
 import pandas as pd
 import yaml
@@ -18,6 +19,7 @@ def parse_args(argv):
     parser.add_argument('--creds-file', default='credentials.json')
     parser.add_argument('--config-file', default='config.yml')
     parser.add_argument('--output-file', default='output.json')
+    parser.add_argument('--limit')
 
     return parser.parse_args(argv)
 
@@ -46,9 +48,13 @@ def main(args):
     ],
                           axis=0)
 
+    if args.limit:
+        aggregate = aggregate.head(int(args.limit))
+
     transformed = transform_df_to_pre_json(aggregate, conf['schema_mapping'])
-    __import__('pdb').set_trace()
-    print(transformed)
+
+    with open(args.output_file, 'w') as stream:
+        json.dump(transformed, stream)
 
 
 if __name__ == "__main__":
