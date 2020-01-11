@@ -17,7 +17,7 @@ schema_mapping:
   'category_sub': 'Sub-category 1'
   'category_sub_sub': 'Sub-category 2'
   'location': 'State/Territory'
-  # 'LGA',
+  'lga': 'LGA'
   'description': 'Brief description'
   # 'Contact name'
   # 'Contact number'
