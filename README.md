@@ -17,7 +17,7 @@ Hot tip: Make sure ur editor picks up the correct virtualenv
 
 ### Generate Credentials
 
-Go to https://developers.google.com/sheets/api/quickstart/python , follow step 1 and save the json to the root of this repo
+Go [here](https://medium.com/@vince.shields913/reading-google-sheets-into-a-pandas-dataframe-with-gspread-and-oauth2-375b932be7bf), save the json to the root of this repo
 
 ### Development Requirements
 

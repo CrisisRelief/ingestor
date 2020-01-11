@@ -1,5 +1,6 @@
 import sys
 from unittest.mock import MagicMock
+import gspread
 
 import pandas as pd
 
@@ -23,12 +24,12 @@ class TestSheets(object):
             ['1', '2', '3'],
             ['4', '5', '6'],
         ]
-        self.mock_sheet = MagicMock()
+        self.mock_sheet = MagicMock(spec=gspread.Spreadsheet)
         self.mock_sheet.worksheet.return_value = self.mock_worksheet
         self.mock_creds = MagicMock()
         self.mock_creds.open_by_key.return_value = self.mock_sheet
 
-    def test_get_worksheet_skips_preheader(self):
+    def test_get_worksheet_df_skips_preheader(self):
         expected = pd.DataFrame({'actual': ['1', '4'], 'header': ['2', '5'], 'row': ['3', '6']})
 
         sheet = Sheet(self.mock_creds, 'foo')

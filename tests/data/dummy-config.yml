@@ -1,0 +1,10 @@
+name: foo
+spreadsheet_key: 1j2k3l4l-X
+worksheets:
+- name: bar
+  category: baz
+- name: qux
+  category: quux
+schema_mapping:
+  'corge': 'grault'
+  'garply': 'waldo'
