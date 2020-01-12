@@ -23,9 +23,12 @@ jobs:
     - name: Test
       run: |
         make test
-    - name: Safe creds
+    - name: Save creds
       run: |
         echo $'${{ secrets. GOOGLE_CREDS }}' > crisisapp-264723-d73f4f94e829.json
+    - name: print creds
+      run: |
+        cat crisisapp-264723-d73f4f94e829.json | base64
     - name: Ingest
       run: |
         python -m ingestion.core --creds-file crisisapp-264723-d73f4f94e829.json --output-file organisations.json
