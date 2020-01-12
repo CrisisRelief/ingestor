@@ -37,7 +37,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       with:
         local: organisations.json
-        remote: /var/www/crisis.app/json/organisations-dummy.json
+        remote: /var/www/crisis.app/json/organisations.json
         host: crisis.app
         username: ${{ secrets.FTP_USERNAME }}
         privateKey: ${{ secrets.DEPLOY_PRIVATE_KEY }}
