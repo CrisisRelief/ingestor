@@ -3,14 +3,13 @@
 name: ingest organisations from Bushfire Directory
 spreadsheet_key: 1UflHns4xANQ9lo4c9N1CdSNF58HBrFh-g99eDhRQrcQ
 worksheets:
-- name: 'Accomm'
-  category: Accomodation
-- name: 'Animals'
-- name: 'Goods/donations'
+- name: 'Accommodation'
+- name: 'Pets and wildlife'
+- name: 'Goods/supplies donations'
 - name: 'Money donations'
 - name: 'Local community groups '
   category: Local community groups
-- name: 'General assistance'
+- name: 'General assistance or information'
 schema_mapping:
   'title': 'Organisation/group name'
   'category': '__CATEGORY'
@@ -20,7 +19,7 @@ schema_mapping:
   'lga': 'LGA'
   'description': 'Brief description'
   # 'Contact name'
-  # 'Contact number'
+  'phone': 'Contact number'
   'email': 'Contact email'
   'address': 'Contact address'
   'link': 'Link'
