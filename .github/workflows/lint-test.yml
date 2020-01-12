@@ -1,4 +1,4 @@
-name: Lint and Test
+name: Lint, Test and Ingest
 
 on: [push]
 
@@ -23,3 +23,19 @@ jobs:
     - name: Test
       run: |
         make test
+    - name: Safe creds
+      run: |
+        echo $'${{ secrets. GOOGLE_CREDS }}' > crisisapp-264723-d73f4f94e829.json
+    - name: Ingest
+      run: |
+        python -m ingestion.core --creds-file crisisapp-264723-d73f4f94e829.json --output-file organisations.json
+    - name: Copy via ssh
+      uses: garygrossgarten/github-action-scp@v0.5.3
+      if: github.ref == 'refs/heads/master'
+      with:
+        local: organisations.json
+        remote: /var/www/crisis.app/json/organisations-dummy.json
+        host: crisis.app
+        username: ${{ secrets.FTP_USERNAME }}
+        privateKey: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+        passphrase: ${{ secrets. DEPLOY_KEY_PASSWORD }}
