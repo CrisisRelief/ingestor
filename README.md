@@ -36,3 +36,7 @@ Or to continuously re-run the tests on change:
 ```
 make test_watch
 ```
+
+# Usage
+
+Just run a build in https://github.com/CrisisRelief/ingestor/actions
