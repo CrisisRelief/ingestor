@@ -25,7 +25,7 @@ jobs:
         make test
     - name: Save creds
       run: |
-        echo $'${{ secrets. GOOGLE_CREDS }}' > crisisapp-264723-d73f4f94e829.json
+        echo $'${{ secrets.GOOGLE_CREDS }}' | base64 -d > crisisapp-264723-d73f4f94e829.json
     - name: print creds
       run: |
         cat crisisapp-264723-d73f4f94e829.json | base64
