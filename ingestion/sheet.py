@@ -7,7 +7,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 try:
     # deal with https://github.com/pyenv/pyenv/issues/415
     PATH = sys.path
-    if os.environ['PYENV_VIRTUAL_ENV']:
+    if os.environ.get('PYENV_VIRTUAL_ENV'):
         sys.path.append(
             os.path.join(
                 os.environ['PYENV_VIRTUAL_ENV'],
