@@ -1,7 +1,21 @@
-import gspread
+import sys
+import os
+
 import pandas as pd
-from gspread.exceptions import WorksheetNotFound
 from oauth2client.service_account import ServiceAccountCredentials
+
+try:
+    # deal with https://github.com/pyenv/pyenv/issues/415
+    PATH = sys.path
+    if os.environ['PYENV_VIRTUAL_ENV']:
+        sys.path.append(
+            os.path.join(
+                os.environ['PYENV_VIRTUAL_ENV'],
+                f'lib/python{sys.version_info.major}.{sys.version_info.minor}/site-packages'))
+    import gspread
+    from gspread.exceptions import WorksheetNotFound
+finally:
+    sys.path = PATH
 
 DEFAULT_SCOPE = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 
@@ -20,8 +34,8 @@ class Sheet:
             cells = self.sheet.worksheet(name).get_all_values()
         except WorksheetNotFound:
             sheet_names = [
-                worksheet['properties']['title'] for worksheet in
-                self.sheet.fetch_sheet_metadata()['sheets']
+                worksheet['properties']['title']
+                for worksheet in self.sheet.fetch_sheet_metadata()['sheets']
             ]
             raise UserWarning(f"worksheet {name} not found. Options: {sheet_names}")
 
@@ -31,7 +45,5 @@ class Sheet:
         if constants:
             headers += list(constants.keys())
             extra_cells = list(constants.values())
-        rows = [
-            row + extra_cells for row in rows if any(row)
-        ]
+        rows = [row + extra_cells for row in rows if any(row)]
         return pd.DataFrame(rows, columns=headers)
