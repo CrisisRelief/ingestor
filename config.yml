@@ -1,7 +1,7 @@
 ---
 
 name: ingest organisations from Bushfire Directory
-spreadsheet_key: 1UflHns4xANQ9lo4c9N1CdSNF58HBrFh-g99eDhRQrcQ
+spreadsheet_key: '1WyteykN-L_yZwS6jVNY0tb-CVWNtYBaGkxYKxJaEDRM'
 worksheets:
 - name: 'Accommodation'
 - name: 'Pets, livestock and wildlife'
