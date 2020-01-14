@@ -24,14 +24,12 @@ def parse_args(argv):
     return parser.parse_args(argv)
 
 
-def transform_df_record_to_pre_json(record, schema_mapping):
+def xform_df_record_pre_json(record, schema_mapping):
     return dict([(key, record.get(value)) for key, value in schema_mapping.items()])
 
 
-def transform_df_to_pre_json(frame, schema_mapping):
-    return [
-        transform_df_record_to_pre_json(row, schema_mapping) for row in frame.to_dict('records')
-    ]
+def xform_df_pre_json(frame, schema_mapping):
+    return [xform_df_record_pre_json(row, schema_mapping) for row in frame.to_dict('records')]
 
 
 def main(args):
@@ -49,7 +47,7 @@ def main(args):
     if args.limit:
         aggregate = aggregate.head(int(args.limit))
 
-    transformed = transform_df_to_pre_json(aggregate, conf['schema_mapping'])
+    transformed = xform_df_pre_json(aggregate, conf['schema_mapping'])
 
     with open(args.output_file, 'w') as stream:
         json.dump(transformed, stream)

@@ -11,7 +11,7 @@ try:
     PATH = sys.path
     sys.path.append(REPO_ROOT)
 
-    from ingestion.core import parse_args, parse_config, transform_df_to_pre_json
+    from ingestion.core import parse_args, parse_config, xform_df_pre_json
 finally:
     sys.path = PATH
 
@@ -49,7 +49,7 @@ class TestCore:
 
         assert expected == result
 
-    def test_transform_df_row_to_json(self):
+    def test_xform_df_row_to_json(self):
         schema_mapping = {
             'corge': 'grault',
             'garply': 'waldo'
@@ -62,6 +62,6 @@ class TestCore:
             {'corge': 'f', 'garply': 'e'},
         ]
 
-        transformed = transform_df_to_pre_json(df_in, schema_mapping)
+        transformed = xform_df_pre_json(df_in, schema_mapping)
 
         assert expected == transformed
