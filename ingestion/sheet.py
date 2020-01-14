@@ -17,7 +17,15 @@ try:
 finally:
     sys.path = PATH
 
-DEFAULT_SCOPE = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+DEFAULT_SCOPE = [
+    'https://spreadsheets.google.com/feeds',
+    'https://www.googleapis.com/auth/drive',
+    'https://www.googleapis.com/auth/drive.appdata',
+    'https://www.googleapis.com/auth/drive.file',
+    'https://www.googleapis.com/auth/drive.metadata',
+    'https://www.googleapis.com/auth/drive.metadata.readonly',
+    'https://www.googleapis.com/auth/drive.readonly'
+]
 
 
 def authorize_creds(creds_file, scope=DEFAULT_SCOPE):
@@ -27,6 +35,7 @@ def authorize_creds(creds_file, scope=DEFAULT_SCOPE):
 
 class Sheet:
     def __init__(self, gc, spreadsheet_key):
+        self.spreadsheet_key = spreadsheet_key
         self.sheet = gc.open_by_key(spreadsheet_key)
 
     def get_worksheet_df(self, name, header_row=0, constants=None):
@@ -47,3 +56,10 @@ class Sheet:
             extra_cells = list(constants.values())
         rows = [row + extra_cells for row in rows if any(row)]
         return pd.DataFrame(rows, columns=headers)
+
+    @property
+    def modtime_str(self):
+        url = f"https://www.googleapis.com/drive/v3/files/{self.spreadsheet_key}"
+        params = {'fields': 'modifiedTime'}
+        file_ = self.sheet.client.request('get', url, params=params).json()
+        return file_['modifiedTime']

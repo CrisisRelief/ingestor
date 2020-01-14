@@ -2,3 +2,6 @@ fileignoreconfig:
 - filename: .github/workflows/lint-test.yml
   checksum: 90b13fe57ab9c735406a208d39df1ed2765f41b51f23c6f9fcca812508015a92
   ignore_detectors: []
+- filename: ingestion/mod_dump.py
+  checksum: a1a32eedce0ad99c94f642f439f1acc71ff845000d7419e4bd775efaecabed69
+  ignore_detectors: []
