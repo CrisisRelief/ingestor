@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 credentials.json
 organisations.json
+.last_mod
