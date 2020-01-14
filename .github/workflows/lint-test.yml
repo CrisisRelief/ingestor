@@ -1,6 +1,8 @@
 name: Lint, Test and Ingest
 
-on: [push]
+on:
+  push:
+  repository_dispatch:
 
 jobs:
   build:
