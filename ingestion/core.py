@@ -25,11 +25,17 @@ def parse_args(argv):
 
 
 def xform_df_record_pre_json(record, schema_mapping):
-    return dict([(key, record.get(value)) for key, value in schema_mapping.items()])
+    record = dict([(key, record.get(value)) for key, value in schema_mapping.items()])
+    if not any(record.values()):
+        return
+    return record
 
 
 def xform_df_pre_json(frame, schema_mapping):
-    return [xform_df_record_pre_json(row, schema_mapping) for row in frame.to_dict('records')]
+    return list(filter(
+        None,
+        [xform_df_record_pre_json(row, schema_mapping) for row in frame.to_dict('records')]
+    ))
 
 
 def main(args):
@@ -38,8 +44,8 @@ def main(args):
     sheet = Sheet(gc, conf['spreadsheet_key'])
     aggregate = pd.concat([
         sheet.get_worksheet_df(
-            worksheet_spec['name'], 6,
-            {'__CATEGORY': worksheet_spec.get('category', worksheet_spec['name'])})
+            worksheet_spec['name'], conf.get('skip_rows', 0),
+            {'__WORKSHEET': worksheet_spec.get('category', worksheet_spec['name'])})
         for worksheet_spec in conf['worksheets']
     ],
                           axis=0)
@@ -48,6 +54,8 @@ def main(args):
         aggregate = aggregate.head(int(args.limit))
 
     transformed = xform_df_pre_json(aggregate, conf['schema_mapping'])
+    if not transformed:
+        raise UserWarning("no data")
 
     with open(args.output_file, 'w') as stream:
         json.dump(transformed, stream)

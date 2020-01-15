@@ -65,3 +65,19 @@ class TestCore:
         transformed = xform_df_pre_json(df_in, schema_mapping)
 
         assert expected == transformed
+
+    def test_xform_df_row_to_json_blanks(self):
+        schema_mapping = {
+            'corge': 'grault',
+            'garply': 'waldo'
+        }
+        df_in = pd.DataFrame([
+            ['a', None, None], ['d', 'e', 'f']
+        ], columns=['foo', 'waldo', 'grault'])
+        expected = [
+            {'corge': 'f', 'garply': 'e'},
+        ]
+
+        transformed = xform_df_pre_json(df_in, schema_mapping)
+
+        assert expected == transformed
