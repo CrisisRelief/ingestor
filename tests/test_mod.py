@@ -29,7 +29,7 @@ class TestMod:
     new_mock_sheet.modtime_str = mod_str_new
 
     def test_get_last_mod_time(self):
-        modfile_src = os.path.join(TEST_DATA, '.last_mod')
+        modfile_src = os.path.join(TEST_DATA, 'last_mod')
         with \
                 tempfile.TemporaryDirectory() as tempdir, \
                 ChDir(tempdir):
