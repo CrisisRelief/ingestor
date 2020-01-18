@@ -18,6 +18,9 @@ def dump_this_mod_time(sheet, name):
 
 
 def mod_since_last_run(sheet, name):
+    print("current mod str", sheet.modtime_str)
+    last_mod_str = get_last_mod_time(name)
+    print("last mod str", last_mod_str)
     return sheet.modtime_str != get_last_mod_time(name)
 
 
@@ -25,4 +28,5 @@ def exit_if_no_mod(sheet, name):
     modified = mod_since_last_run(sheet, name)
     dump_this_mod_time(sheet, name)
     if not modified:
+        print("exiting")
         exit
