@@ -11,3 +11,15 @@ fileignoreconfig:
 - filename: ingestion/mod_dump.py
   checksum: 6e4a8ba91b448f7865d04dd6920baf704761768389ce098b0d54936d4b4b7bf3
   ignore_detectors: []
+- filename: config-dev.yml
+  checksum: 9626b6a57ffdd2686114c1c2b20883ad76d4f834a529a43bb8ab7766871d4f5f
+  ignore_detectors: []
+- filename: config.yml
+  checksum: 339bcf256b57119001d5f2cbfb09043a1cd78d106b9b0add3a4baf27595a3304
+  ignore_detectors: []
+- filename: config.yml
+  checksum: 339bcf256b57119001d5f2cbfb09043a1cd78d106b9b0add3a4baf27595a3304
+  ignore_detectors: []
+- filename: config-dev.yml
+  checksum: c74c9e7dd675c260856dd5ec9c644d4fbb42ada29a280ea8b7c38e0e79e6a437
+  ignore_detectors: []

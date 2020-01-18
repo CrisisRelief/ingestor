@@ -1,6 +1,6 @@
 ---
 
-name: ingest organisations from Bushfire Directory
+name: ingest organisations from Bushfire Directory for dev
 spreadsheet_key: '18OkKv06YwJxOiRZuX2pIxmRWxE3rBjECtJ0pL-DL_m0'
 skip_rows: 0
 worksheets:

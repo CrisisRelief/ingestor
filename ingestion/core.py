@@ -44,7 +44,7 @@ def main(args):
     conf = parse_config(args.config_file)
     gc = authorize_creds(args.creds_file)
     sheet = Sheet(gc, conf['spreadsheet_key'])
-    exit_if_no_mod(sheet, conf['name'])
+    exit_if_no_mod(sheet, args.name)
 
     aggregate = pd.concat([
         sheet.get_worksheet_df(
