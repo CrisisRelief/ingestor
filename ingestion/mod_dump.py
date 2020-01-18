@@ -1,7 +1,4 @@
-import sys
 import os
-from .core import parse_config, parse_args
-from .sheet import Sheet, authorize_creds
 
 
 MOD_FILE_FMT = '.%s.last_mod'
@@ -24,12 +21,8 @@ def mod_since_last_run(sheet, name):
     return sheet.modtime_str != get_last_mod_time(name)
 
 
-def main(args):
-    conf = parse_config(args.config_file)
-    gc = authorize_creds(args.creds_file)
-    sheet = Sheet(gc, conf['spreadsheet_key'])
-    print(sheet.modtime_str)
-
-
-if __name__ == "__main__":
-    main(parse_args(sys.argv[1:]))
+def exit_if_no_mod(sheet, name):
+    modified = mod_since_last_run(sheet, name)
+    dump_this_mod_time(sheet, name)
+    if not modified:
+        exit

@@ -8,3 +8,6 @@ fileignoreconfig:
 - filename: ingestion/mod_dump.py
   checksum: 45cf616aa9c3e4a20abd1f3b66b237a34fe2ca7bfe1960ec4cd6fc74f020eba7
   ignore_detectors: []
+- filename: ingestion/mod_dump.py
+  checksum: 6e4a8ba91b448f7865d04dd6920baf704761768389ce098b0d54936d4b4b7bf3
+  ignore_detectors: []
