@@ -39,8 +39,8 @@ class TestCore:
                 {'name': 'qux', 'category': 'quux'}
             ],
             'schema_mapping': {
-                'corge': 'grault',
-                'garply': 'waldo'
+                'corge': "{{ record['grault'] or '' }}",
+                'garply': "{{ record['waldo'] or '' }}"
             }
         }
         dummy_config_file = os.path.join(TEST_DATA, 'dummy-config.yml')
@@ -51,8 +51,8 @@ class TestCore:
 
     def test_xform_df_row_to_json(self):
         schema_mapping = {
-            'corge': 'grault',
-            'garply': 'waldo'
+            'corge': "{{ record['grault'] or '' }}",
+            'garply': "{{ record['waldo'] or '' }}"
         }
         df_in = pd.DataFrame([
             ['a', 'b', 'c'], ['d', 'e', 'f']
@@ -68,8 +68,8 @@ class TestCore:
 
     def test_xform_df_row_to_json_blanks(self):
         schema_mapping = {
-            'corge': 'grault',
-            'garply': 'waldo'
+            'corge': "{{ record['grault'] or '' }}",
+            'garply': "{{ record['waldo'] or '' }}"
         }
         df_in = pd.DataFrame([
             ['a', None, None], ['d', 'e', 'f']

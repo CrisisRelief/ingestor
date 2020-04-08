@@ -6,5 +6,5 @@ worksheets:
 - name: qux
   category: quux
 schema_mapping:
-  'corge': 'grault'
-  'garply': 'waldo'
+  'corge': "{{ record['grault'] or '' }}"
+  'garply': "{{ record['waldo'] or '' }}"

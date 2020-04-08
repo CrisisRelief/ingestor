@@ -3,6 +3,7 @@ import json
 import sys
 
 import pandas as pd
+from jinja2 import Template
 import yaml
 
 from .sheet import Sheet, authorize_creds
@@ -27,10 +28,13 @@ def parse_args(argv):
 
 
 def xform_df_record_pre_json(record, schema_mapping):
-    record = dict([(key, record.get(value)) for key, value in schema_mapping.items()])
-    if not any(record.values()):
+    # __import__('pdb').set_trace()
+    result = {}
+    for key, value in schema_mapping.items():
+        result[key] = Template(value).render(record=record)
+    if not any(result.values()):
         return
-    return record
+    return result
 
 
 def xform_df_pre_json(frame, schema_mapping):
