@@ -5,6 +5,10 @@ spreadsheet_key: '18OkKv06YwJxOiRZuX2pIxmRWxE3rBjECtJ0pL-DL_m0'
 skip_rows: 0
 worksheets:
 - name: 'MAIN SHEET DATA - DO NOT CHANGE'
+taxonomy_fields:
+- "What is the nature of your offer or request?"
+- "Sub-category 1"
+- "Sub-category 2"
 taxonomy:
   1: "Housing / Accommodation (Human)"
   6: "Pets / Livestock / Wildlife"

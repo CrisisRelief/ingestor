@@ -5,3 +5,10 @@ worksheets:
   category: baz
 - name: qux
   category: quux
+taxonomy:
+  1: "corge"
+  68: "grault"
+  70: "fred"
+taxonomy_fields:
+- "garply"
+- "waldo"
