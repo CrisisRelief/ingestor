@@ -37,13 +37,32 @@ Or to continuously re-run the tests on change:
 make test_watch
 ```
 
-# Config
+## Usage
+
+Just run a build in https://github.com/CrisisRelief/ingestor/actions
+
+```
+usage: core.py [-h] [--creds-file CREDS_FILE] [--config-file CONFIG_FILE]
+               [--output-file OUTPUT_FILE] [--schema-file SCHEMA_FILE]
+               [--name NAME] [--limit LIMIT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --creds-file CREDS_FILE
+  --config-file CONFIG_FILE
+  --output-file OUTPUT_FILE
+  --schema-file SCHEMA_FILE
+  --name NAME
+  --limit LIMIT
+```
+
+### Config File
 
 see `tests/data/dumy-config.yaml` for an example of a config file.
 
 The schema mappings support Jinja2 template strings with the following available variables:
 - **record** a dictionary of the row in the sheet.
 
-# Usage
+### Schema File
 
-Just run a build in https://github.com/CrisisRelief/ingestor/actions
+see `tests/data/dumy-schema.yaml` for an example of a schema file.

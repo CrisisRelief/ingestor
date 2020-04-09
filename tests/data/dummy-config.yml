@@ -5,6 +5,3 @@ worksheets:
   category: baz
 - name: qux
   category: quux
-schema_mapping:
-  'corge': "{{ record['grault'] or '' }}"
-  'garply': "{{ record['waldo'] or '' }}"

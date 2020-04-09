@@ -22,8 +22,12 @@ class TestCore:
             creds_file='foo.json',
             config_file='bar.yml',
             output_file='baz.json',
+            schema_file='qux.yml',
         )
-        argv = shlex.split('--creds-file foo.json --config-file bar.yml --output-file baz.json')
+        argv = shlex.split(
+            '--creds-file foo.json --config-file bar.yml --output-file baz.json'
+            ' --schema-file qux.yml'
+        )
 
         result = parse_args(argv)
 
@@ -44,8 +48,9 @@ class TestCore:
             }
         }
         dummy_config_file = os.path.join(TEST_DATA, 'dummy-config.yml')
+        dummy_schema_file = os.path.join(TEST_DATA, 'dummy-schema.yml')
 
-        result = parse_config(dummy_config_file)
+        result = parse_config(dummy_config_file, dummy_schema_file)
 
         assert expected == result
 

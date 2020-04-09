@@ -5,28 +5,3 @@ spreadsheet_key: '18OkKv06YwJxOiRZuX2pIxmRWxE3rBjECtJ0pL-DL_m0'
 skip_rows: 0
 worksheets:
 - name: 'MAIN SHEET DATA - DO NOT CHANGE'
-schema_mapping:
-  'title': "{{ record['Name of group, organization or person providing this service'] or ''}}"
-  'category': "{{ record['What is the nature of your offer or request?'] or ''}}"
-  'category_sub': "{{ record['Sub-category 1'] or ''}}"
-  'category_sub_sub': "{{ record['Sub-category 2'] or ''}}"
-  'location': "{{ record['State/Territory'] or ''}}"
-  'description': "{{ record['Briefly describe the offer or request'] or ''}}"
-  'phone': "{{ record['Service Telephone Number (Optional)'] or ''}}"
-  'email': "{{ record['Service Email (Optional)'] or ''}}"
-  'address': "{{ record['Service Address (optional)'] or ''}}"
-  'link': "{{ record['Link (optional)'] or ''}}"
-  'lat': "{{ record['Latitude'] or ''}}"
-  'long': "{{ record['Longitude'] or ''}}"
-  'title': 'Name of group, organization or person providing this service'
-  'category': 'What is the nature of your offer or request?'
-  'category_sub': 'Sub-category 1'
-  'category_sub_sub': 'Sub-category 2'
-  'location': 'State/Territory'
-  'description': 'Briefly describe the offer or request'
-  'phone': 'Service Telephone Number (Optional)'
-  'email': 'Service Email (Optional)'
-  'address': 'Service Address (optional)'
-  'link': 'Link (optional)'
-  'lat': 'Latitude'
-  'long': 'Longitude'

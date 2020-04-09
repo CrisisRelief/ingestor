@@ -10,9 +10,11 @@ from .sheet import Sheet, authorize_creds
 from .mod_dump import exit_if_no_mod
 
 
-def parse_config(config_file):
+def parse_config(config_file, schema_file):
     with open(config_file) as stream:
         conf = yaml.safe_load(stream)
+    with open(schema_file) as stream:
+        conf['schema_mapping'] = yaml.safe_load(stream)
     return conf
 
 
@@ -21,6 +23,7 @@ def parse_args(argv):
     parser.add_argument('--creds-file', default='credentials.json')
     parser.add_argument('--config-file', default='config.yml')
     parser.add_argument('--output-file', default='output.json')
+    parser.add_argument('--schema-file', default='schema-vue.yaml')
     parser.add_argument('--name', default='ingestion')
     parser.add_argument('--limit')
 
@@ -45,7 +48,7 @@ def xform_df_pre_json(frame, schema_mapping):
 
 
 def main(args):
-    conf = parse_config(args.config_file)
+    conf = parse_config(args.config_file, args.schema_file)
     gc = authorize_creds(args.creds_file)
     sheet = Sheet(gc, conf['spreadsheet_key'])
     exit_if_no_mod(sheet, args.name)
