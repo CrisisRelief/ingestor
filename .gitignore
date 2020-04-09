@@ -130,3 +130,4 @@ dmypy.json
 credentials.json
 organisations.json
 .last_mod
+.ingestion.last_mod

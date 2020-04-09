@@ -25,12 +25,19 @@ def parse_config(config_file, schema_file):
 
 def parse_args(argv):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--creds-file', default='credentials.json')
-    parser.add_argument('--config-file', default='config.yml')
-    parser.add_argument('--output-file', default='output.json')
-    parser.add_argument('--schema-file', default='schema-vue.yaml')
-    parser.add_argument('--name', default='ingestion')
-    parser.add_argument('--limit')
+    parser.add_argument(
+        '-C', '--creds-file', default='credentials.json')
+    parser.add_argument(
+        '-c', '--config-file', default='config.yml')
+    parser.add_argument(
+        '-o', '--output-file', default='/dev/stdout',
+        help="where to output the result (default: stdout)")
+    parser.add_argument(
+        '-s', '--schema-file', default='schema-vue.yaml')
+    parser.add_argument(
+        '-n', '--name', default='ingestion')
+    parser.add_argument(
+        '-L', '--limit')
 
     return parser.parse_args(argv)
 

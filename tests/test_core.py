@@ -20,14 +20,16 @@ class TestCore:
     def test_parse_args(self):
         # Given
         expected = argparse.Namespace(
-            creds_file='foo.json',
-            config_file='bar.yml',
-            output_file='baz.json',
-            schema_file='qux.yml',
+            creds_file='tests/data/dummy-credentials.json',
+            config_file='tests/data/dummy-config.yml',
+            schema_file='tests/data/dummy-schema.yml',
+            output_file='tests/data/dummy-output.json',
         )
         argv = shlex.split(
-            '--creds-file foo.json --config-file bar.yml --output-file baz.json'
-            ' --schema-file qux.yml'
+            '--creds-file tests/data/dummy-credentials.json'
+            ' --config-file tests/data/dummy-config.yml'
+            ' --schema-file tests/data/dummy-schema.yml'
+            ' --output-file tests/data/dummy-output.json'
         )
 
         # When
@@ -36,6 +38,27 @@ class TestCore:
         # Then
         for key, value in vars(expected).items():
             assert vars(result)[key] == value
+
+    def test_parse_args_default_stdout(self):
+        # Given
+        expected = argparse.Namespace(
+            creds_file='tests/data/dummy-credentials.json',
+            config_file='tests/data/dummy-config.yml',
+            schema_file='tests/data/dummy-schema.yml',
+            output_file='/dev/stdout',
+        )
+        argv = shlex.split(
+            '--creds-file tests/data/dummy-credentials.json'
+            ' --config-file tests/data/dummy-config.yml'
+            ' --schema-file tests/data/dummy-schema.yml'
+        )
+
+        # When
+        result = vars(parse_args(argv))
+
+        # Then
+        for key, value in vars(expected).items():
+            assert result[key] == value
 
     def test_parse_config(self):
         # Given
