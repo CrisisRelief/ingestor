@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 
 def get_mod_file(name):
@@ -33,4 +34,4 @@ def exit_if_no_mod(name, current_mod_str):
     dump_this_mod_time(name, current_mod_str)
     if not modified:
         print("exiting")
-        exit
+        sys.exit()

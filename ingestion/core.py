@@ -21,6 +21,7 @@ def epprint(*args, **kwargs):
 def parse_config(config_file, schema_file, taxonomy_file):
     with open(config_file) as stream:
         conf = yaml.safe_load(stream)
+
     with open(schema_file) as stream:
         conf['schema_mapping'] = yaml.safe_load(stream)
     with open(taxonomy_file) as stream:
@@ -136,16 +137,18 @@ def get_df_drupal(conf, creds_file, name):
     exit_if_no_mod(name, latest_modtime.isoformat())
 
     # extract all entries with mod_time greater than the last time this importer ran
+
     if last_modtime:
         new_entries = [
             sid for sid, modtime in sid_modtimes.items() if modtime > last_modtime
         ]
     else:
         new_entries = sid_modtimes.keys()
-    return drupal.get_form_entries_df(conf, new_entries)
+    return drupal.get_form_entries_df(conf['form_id'], new_entries)
 
 
 def main(args):
+    epprint(vars(args))
     conf = parse_config(args.config_file, args.schema_file, args.taxonomy_file)
     epprint(conf)
 

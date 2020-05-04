@@ -1,5 +1,3 @@
-import json
-
 import pandas as pd
 import requests
 
@@ -31,57 +29,45 @@ class Drupal:
         )
 
     def get_form_entry_meta(self, form_id):
-        # TODO: test and implement this
+        """
+        return the `data` attribute of the `json.loads` output for the form from
+        """
 
-        # Step 1 (optional): Get a list of webforms from f'{self.base_url}jsonapi/webform/webform'
-
-        # Step 2 (optional): validate that form_id exists in the forms from the previous step
-
-        # Step 3: return the `data` attribute of the `json.loads` output for the form from
-        # f'{self.base_url}jsonapi/webform_submission/{form_id}'
-
-        # e.g.:
-
-        if self:  # bypasses linter warnings in stub
-            pass
-        with open('tests/data/dummy-form-meta.json') as stream:
-            return json.load(stream)['data']
+        resp = self.session.get(f'{self.base_url}jsonapi/webform_submission/{form_id}')
+        return resp.json()["data"]
 
     def get_form_entries_df(self, form_id, sids):
-        # TODO: test and implement this
+        """
+        return the `data` attribute from each sid in `sids` for the form `form_id`.
+        """
 
-        # Step 1: Download the `data` from each sid using
-        # f'{self.base_url}webform_rest/{webform_id}/submission/{sid}'
+        rows = []
+        for sid in sids:
+            resp = self.session.get(f'{self.base_url}webform_rest/{form_id}/submission/{sid}')
+            form_data = resp.json()['data']
 
-        # Step 2: The output needs to be a dataframe, e.g. :
-
-        if self:  # bypasses linter warnings in stub
-            pass
-
-        rows = [
-            {
-                "contact_email": "foo@bar.com",
-                "contact_name": "test contact name",
-                "contact_phone": "test phone",
-                "link": "test link",
-                "public_contact": "0",
-                "resource_category": [
-                    "187"
-                ],
-                "resource_description": "test description",
-                "resource_title": "testing title"
-            }
-        ]
+            rows.append({
+                key: form_data[key]
+                for key in [
+                    "contact_email",
+                    "contact_name",
+                    "contact_phone",
+                    "link",
+                    "public_contact",
+                    "resource_category",
+                    "resource_description",
+                    "resource_title",
+                ]
+            })
         return pd.DataFrame(rows)
 
     def get_taxonomy_terms(self, taxonomy_vocab):
-        resp_json = self.session.get(
-            f'{self.base_url}jsonapi/taxonomy_term/{taxonomy_vocab}'
-        ).json()
+        resp = self.session.get(f'{self.base_url}jsonapi/taxonomy_term/{taxonomy_vocab}')
+        resp_json_data = resp.json()['data']
 
         uuid_tids = {
             term['id']: term['attributes']['drupal_internal__tid']
-            for term in resp_json['data']
+            for term in resp_json_data
         }
 
         return [
@@ -93,5 +79,5 @@ class Drupal:
                     for parent in term['relationships']['parent']['data']
                     if parent['id'] in uuid_tids
                 ]
-            } for term in resp_json['data']
+            } for term in resp_json_data
         ]

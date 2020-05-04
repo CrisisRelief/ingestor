@@ -4,5 +4,6 @@ yamllint
 pytest-watch
 responses
 pylint
+mock
 yapf
 -r requirements.txt

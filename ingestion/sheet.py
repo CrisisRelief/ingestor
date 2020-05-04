@@ -28,7 +28,9 @@ DEFAULT_SCOPE = [
 ]
 
 
-def authorize_creds(creds_file, scope=DEFAULT_SCOPE):
+def authorize_creds(creds_file, scope=None):
+    if scope is None:
+        scope = DEFAULT_SCOPE
     creds = ServiceAccountCredentials.from_json_keyfile_name(creds_file, scope)
     return gspread.authorize(creds)
 
