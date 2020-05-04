@@ -10,6 +10,7 @@ import yaml
 
 from .sheet import Sheet, authorize_creds
 from .mod_dump import exit_if_no_mod
+from .drupal import Drupal
 
 
 def epprint(*args, **kwargs):
@@ -32,6 +33,9 @@ def parse_args(argv):
         '-c', '--config-file', default='config.yml')
     parser.add_argument(
         '-s', '--schema-file', default='schema-vue.yaml')
+    parser.add_argument(
+        '-S', '--input-source', default='gsheet'
+    )
     parser.add_argument(
         '-o', '--output-file', default='/dev/stdout',
         help="where to output the result (default: stdout)")
@@ -91,27 +95,44 @@ def xform_df_pre_json(frame, schema_mapping, taxonomy=None, taxonomy_fields=None
     ))
 
 
-def aggregate_worksheets(sheet, worksheet_specs, skip_rows=None):
-    if skip_rows is None:
-        skip_rows = 0
+def get_df_gsheets(conf, creds_file, name):
+    gc = authorize_creds(creds_file)
+    sheet = Sheet(gc, conf['spreadsheet_key'])
+    exit_if_no_mod(sheet, name)
+    skip_rows = conf.get('skip_rows', 0)
     return pd.concat([
         sheet.get_worksheet_df(
             worksheet_spec['name'], skip_rows,
             {'__WORKSHEET': worksheet_spec.get('category', worksheet_spec['name'])})
-        for worksheet_spec in worksheet_specs
+        for worksheet_spec in conf['worksheets']
     ],
                           axis=0)
+
+
+def get_df_drupal(conf, creds_file, name):
+    with open(creds_file) as stream:
+        creds = yaml.safe_load(stream)
+    drupal = Drupal(
+        base_url=conf['drupal_base_url'],
+        username=creds['username'],
+        password=creds['password']
+    )
+    return drupal.get_form_entries_df(conf)
 
 
 def main(args):
     conf = parse_config(args.config_file, args.schema_file)
     epprint(conf)
-    gc = authorize_creds(args.creds_file)
-    sheet = Sheet(gc, conf['spreadsheet_key'])
-    exit_if_no_mod(sheet, args.name)
 
-    aggregate = aggregate_worksheets(
-        sheet, worksheet_specs=conf['worksheets'], skip_rows=conf.get('skip_rows'))
+    xform_kwargs = {}
+    if args.input_source == 'gsheet':
+        aggregate = get_df_gsheets(conf, args.creds_file, args.name)
+        xform_kwargs = {
+            'taxonomy': conf.get('taxonomy'),
+            'taxonomy_fields': conf.get('taxonomy_fields')
+        }
+    elif args.input_source == 'drupal':
+        aggregate = get_df_drupal(conf, args.creds_file, args.name)
 
     if args.limit:
         aggregate = aggregate.head(int(args.limit))
@@ -119,8 +140,7 @@ def main(args):
     transformed = xform_df_pre_json(
         aggregate,
         conf['schema_mapping'],
-        conf.get('taxonomy'),
-        conf.get('taxonomy_fields'),
+        **xform_kwargs
     )
     if not transformed:
         raise UserWarning("no data")
@@ -128,7 +148,6 @@ def main(args):
     if args.output_format == 'json':
         with open(args.output_file, 'w') as stream:
             json.dump(transformed, stream)
-
     elif args.output_format == 'csv':
         with open(args.output_file, 'w') as stream:
             writer = csv.DictWriter(stream, fieldnames=conf['schema_mapping'].keys())

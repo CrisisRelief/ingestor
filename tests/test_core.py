@@ -217,17 +217,14 @@ class TestCore:
                 ['a', 'b', None, 'fred, grault'],
                 ['d', 'e', 'f', 'corge, FRED ']
             ], columns=['foo', 'waldo', 'grault', 'plugh'])
-            mock_aggregate_worksheets = MagicMock()
-            mock_aggregate_worksheets.return_value = df_in
+            mock_get_df_gsheets = MagicMock()
+            mock_get_df_gsheets.return_value = df_in
 
             with open(os.path.join(TEST_DATA, 'dummy-output.json')) as stream:
                 expected_json = json.load(stream)
 
             # When
-            with \
-                    patch('ingestion.core.authorize_creds', self.mock_creds), \
-                    patch('ingestion.core.aggregate_worksheets', mock_aggregate_worksheets), \
-                    patch('ingestion.sheet.Sheet.modtime_str', '2020-01-14T20:37:29.472Z'):
+            with patch('ingestion.core.get_df_gsheets', mock_get_df_gsheets):
                 main(args)
 
             # Then
@@ -261,17 +258,14 @@ class TestCore:
                 ['a', 'b', None, 'fred, grault'],
                 ['d', 'e', 'f', 'corge, FRED ']
             ], columns=['foo', 'waldo', 'grault', 'plugh'])
-            mock_aggregate_worksheets = MagicMock()
-            mock_aggregate_worksheets.return_value = df_in
+            mock_get_df_gsheets = MagicMock()
+            mock_get_df_gsheets.return_value = df_in
 
             with open(os.path.join(TEST_DATA, 'dummy-output.csv')) as stream:
                 expected_dicts = list(csv.DictReader(stream))
 
             # When
-            with \
-                    patch('ingestion.core.authorize_creds', self.mock_creds), \
-                    patch('ingestion.core.aggregate_worksheets', mock_aggregate_worksheets), \
-                    patch('ingestion.sheet.Sheet.modtime_str', '2020-01-14T20:37:29.472Z'):
+            with patch('ingestion.core.get_df_gsheets', mock_get_df_gsheets):
                 main(args)
 
             # Then

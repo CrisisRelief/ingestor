@@ -131,3 +131,4 @@ credentials.json
 organisations.json
 .last_mod
 .ingestion.last_mod
+creds-drupal-dev.yml
