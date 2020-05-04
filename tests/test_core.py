@@ -234,3 +234,48 @@ class TestCore:
             with open('dummy-output.json') as stream:
                 result_json = json.load(stream)
             assert result_json == expected_json
+
+    def test_main_creates_csv_file(self):
+        with \
+                tempfile.TemporaryDirectory() as tempdir, \
+                ChDir(tempdir):
+
+            # Given
+            for dummy_file in [
+                'dummy-credentials.json',
+                'dummy-config.yml',
+                'dummy-schema.yml',
+            ]:
+                dummy_src = os.path.join(TEST_DATA, dummy_file)
+                dummy_dst = os.path.join(tempdir, dummy_file)
+                shutil.copy(dummy_src, dummy_dst)
+            argv = shlex.split(
+                '--creds-file dummy-credentials.json'
+                ' --config-file dummy-config.yml'
+                ' --schema-file dummy-schema.yml'
+                ' --output-file dummy-output.csv'
+                ' --output-format csv'
+            )
+            args = parse_args(argv)
+            df_in = pd.DataFrame([
+                ['a', 'b', None, 'fred, grault'],
+                ['d', 'e', 'f', 'corge, FRED ']
+            ], columns=['foo', 'waldo', 'grault', 'plugh'])
+            mock_aggregate_worksheets = MagicMock()
+            mock_aggregate_worksheets.return_value = df_in
+
+            with open(os.path.join(TEST_DATA, 'dummy-output.csv')) as stream:
+                expected_dicts = list(csv.DictReader(stream))
+
+            # When
+            with \
+                    patch('ingestion.core.authorize_creds', self.mock_creds), \
+                    patch('ingestion.core.aggregate_worksheets', mock_aggregate_worksheets), \
+                    patch('ingestion.sheet.Sheet.modtime_str', '2020-01-14T20:37:29.472Z'):
+                main(args)
+
+            # Then
+            with open('dummy-output.csv') as stream:
+                result_dicts = list(csv.DictReader(stream))
+
+            assert result_dicts == expected_dicts

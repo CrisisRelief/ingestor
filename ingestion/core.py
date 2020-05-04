@@ -2,6 +2,7 @@ import argparse
 import json
 import sys
 from pprint import pformat
+import csv
 
 import pandas as pd
 from jinja2 import Template
@@ -30,10 +31,13 @@ def parse_args(argv):
     parser.add_argument(
         '-c', '--config-file', default='config.yml')
     parser.add_argument(
+        '-s', '--schema-file', default='schema-vue.yaml')
+    parser.add_argument(
         '-o', '--output-file', default='/dev/stdout',
         help="where to output the result (default: stdout)")
     parser.add_argument(
-        '-s', '--schema-file', default='schema-vue.yaml')
+        '-f', '--output-format', default='json'
+    )
     parser.add_argument(
         '-n', '--name', default='ingestion')
     parser.add_argument(
@@ -63,6 +67,7 @@ def get_category_ids(record, taxonomy, taxonomy_fields):
     return list(category_ids)
 
 
+# TODO: rename pre_json -> pre_output
 def xform_df_record_pre_json(record, schema_mapping, taxonomy=None, taxonomy_fields=None):
     result = {}
     category_ids = []
@@ -75,6 +80,7 @@ def xform_df_record_pre_json(record, schema_mapping, taxonomy=None, taxonomy_fie
     return result
 
 
+# TODO: rename pre_json -> pre_output
 def xform_df_pre_json(frame, schema_mapping, taxonomy=None, taxonomy_fields=None):
     return list(filter(
         None,
@@ -119,8 +125,15 @@ def main(args):
     if not transformed:
         raise UserWarning("no data")
 
-    with open(args.output_file, 'w') as stream:
-        json.dump(transformed, stream)
+    if args.output_format == 'json':
+        with open(args.output_file, 'w') as stream:
+            json.dump(transformed, stream)
+
+    elif args.output_format == 'csv':
+        with open(args.output_file, 'w') as stream:
+            writer = csv.DictWriter(stream, fieldnames=conf['schema_mapping'].keys())
+            writer.writeheader()
+            writer.writerows(transformed)
 
 
 if __name__ == "__main__":
