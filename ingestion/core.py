@@ -85,6 +85,18 @@ def xform_df_pre_json(frame, schema_mapping, taxonomy=None, taxonomy_fields=None
     ))
 
 
+def aggregate_worksheets(sheet, worksheet_specs, skip_rows=None):
+    if skip_rows is None:
+        skip_rows = 0
+    return pd.concat([
+        sheet.get_worksheet_df(
+            worksheet_spec['name'], skip_rows,
+            {'__WORKSHEET': worksheet_spec.get('category', worksheet_spec['name'])})
+        for worksheet_spec in worksheet_specs
+    ],
+                          axis=0)
+
+
 def main(args):
     conf = parse_config(args.config_file, args.schema_file)
     epprint(conf)
@@ -92,13 +104,8 @@ def main(args):
     sheet = Sheet(gc, conf['spreadsheet_key'])
     exit_if_no_mod(sheet, args.name)
 
-    aggregate = pd.concat([
-        sheet.get_worksheet_df(
-            worksheet_spec['name'], conf.get('skip_rows', 0),
-            {'__WORKSHEET': worksheet_spec.get('category', worksheet_spec['name'])})
-        for worksheet_spec in conf['worksheets']
-    ],
-                          axis=0)
+    aggregate = aggregate_worksheets(
+        sheet, worksheet_specs=conf['worksheets'], skip_rows=conf.get('skip_rows'))
 
     if args.limit:
         aggregate = aggregate.head(int(args.limit))

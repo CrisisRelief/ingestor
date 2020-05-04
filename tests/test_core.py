@@ -1,22 +1,31 @@
 import argparse
+import json
 import os
 import shlex
+import csv
+import shutil
 import sys
+import tempfile
+from unittest.mock import patch, MagicMock
 
 import pandas as pd
 
 from . import REPO_ROOT, TEST_DATA
+from .helpers import ChDir, mock_worksheet_helper
 
 try:
     PATH = sys.path
     sys.path.append(REPO_ROOT)
 
-    from ingestion.core import parse_args, parse_config, xform_df_pre_json, get_category_ids
+    from ingestion.core import parse_args, parse_config, xform_df_pre_json, get_category_ids, main
 finally:
     sys.path = PATH
 
 
 class TestCore:
+    def setup_method(self):
+        self.mock_worksheet, self.mock_sheet, self.mock_creds = mock_worksheet_helper()
+
     def test_parse_args(self):
         # Given
         expected = argparse.Namespace(
@@ -182,3 +191,46 @@ class TestCore:
 
         # Then
         assert expected == transformed
+
+    def test_main_creates_json_file(self):
+        with \
+                tempfile.TemporaryDirectory() as tempdir, \
+                ChDir(tempdir):
+
+            # Given
+            for dummy_file in [
+                'dummy-credentials.json',
+                'dummy-config.yml',
+                'dummy-schema.yml',
+            ]:
+                dummy_src = os.path.join(TEST_DATA, dummy_file)
+                dummy_dst = os.path.join(tempdir, dummy_file)
+                shutil.copy(dummy_src, dummy_dst)
+            argv = shlex.split(
+                '--creds-file dummy-credentials.json'
+                ' --config-file dummy-config.yml'
+                ' --schema-file dummy-schema.yml'
+                ' --output-file dummy-output.json'
+            )
+            args = parse_args(argv)
+            df_in = pd.DataFrame([
+                ['a', 'b', None, 'fred, grault'],
+                ['d', 'e', 'f', 'corge, FRED ']
+            ], columns=['foo', 'waldo', 'grault', 'plugh'])
+            mock_aggregate_worksheets = MagicMock()
+            mock_aggregate_worksheets.return_value = df_in
+
+            with open(os.path.join(TEST_DATA, 'dummy-output.json')) as stream:
+                expected_json = json.load(stream)
+
+            # When
+            with \
+                    patch('ingestion.core.authorize_creds', self.mock_creds), \
+                    patch('ingestion.core.aggregate_worksheets', mock_aggregate_worksheets), \
+                    patch('ingestion.sheet.Sheet.modtime_str', '2020-01-14T20:37:29.472Z'):
+                main(args)
+
+            # Then
+            with open('dummy-output.json') as stream:
+                result_json = json.load(stream)
+            assert result_json == expected_json
