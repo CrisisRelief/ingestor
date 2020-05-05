@@ -98,7 +98,7 @@ def xform_df_pre_json(frame, schema_mapping, taxonomy=None, taxonomy_fields=None
 def get_df_gsheets(conf, creds_file, name):
     gc = authorize_creds(creds_file)
     sheet = Sheet(gc, conf['spreadsheet_key'])
-    exit_if_no_mod(sheet, name)
+    exit_if_no_mod(name, sheet.modtime_str)
     skip_rows = conf.get('skip_rows', 0)
     return pd.concat([
         sheet.get_worksheet_df(
@@ -117,7 +117,26 @@ def get_df_drupal(conf, creds_file, name):
         username=creds['username'],
         password=creds['password']
     )
-    return drupal.get_form_entries_df(conf)
+    entry_meta = drupal.get_form_entry_meta(conf['form_id'])
+
+    # TODO: extract a mapping of `attributes.drupal_internal__sid` to `attributes.changed` of the entries
+    # e.g.
+    sid_modtimes = {
+        86: "2020-04-08T04:53:07+00:00",
+        108: "2020-04-09T06:05:16+00:00",
+        109: "2020-04-09T07:23:11+00:00",
+        187: "2020-04-28T02:48:07+00:00",
+    }
+
+    # get the most recent mod_date of entries
+    modtime_str = max(sid_modtimes.values())
+    exit_if_no_mod(name, modtime_str)
+
+    # TODO: extract all entries with mod_time greater than the last time this importer ran
+    # e.g.
+    new_entries = [187, 109, 108]
+
+    return drupal.get_form_entries_df(conf, new_entries)
 
 
 def main(args):

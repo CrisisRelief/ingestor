@@ -3,13 +3,7 @@ fileignoreconfig:
   checksum: 90b13fe57ab9c735406a208d39df1ed2765f41b51f23c6f9fcca812508015a92
   ignore_detectors: []
 - filename: ingestion/mod_dump.py
-  checksum: a1a32eedce0ad99c94f642f439f1acc71ff845000d7419e4bd775efaecabed69
-  ignore_detectors: []
-- filename: ingestion/mod_dump.py
-  checksum: 45cf616aa9c3e4a20abd1f3b66b237a34fe2ca7bfe1960ec4cd6fc74f020eba7
-  ignore_detectors: []
-- filename: ingestion/mod_dump.py
-  checksum: 6e4a8ba91b448f7865d04dd6920baf704761768389ce098b0d54936d4b4b7bf3
+  checksum: afe38f6108eab5e6a5618c0ce8121f80e2cfc1ea4012f394108a81af4b7e1a61
   ignore_detectors: []
 - filename: config-dev.yml
   checksum: 9626b6a57ffdd2686114c1c2b20883ad76d4f834a529a43bb8ab7766871d4f5f
@@ -24,7 +18,7 @@ fileignoreconfig:
   checksum: c74c9e7dd675c260856dd5ec9c644d4fbb42ada29a280ea8b7c38e0e79e6a437
   ignore_detectors: []
 - filename: ingestion/mod_dump.py
-  checksum: 846977980ce4d702517892179a426f43a235e21e61e8fcac70576d7a0070fb1a
+  checksum: afe38f6108eab5e6a5618c0ce8121f80e2cfc1ea4012f394108a81af4b7e1a61
   ignore_detectors: []
 - filename: tests/test_drupal.py
   checksum: 26412a155d0ce76ea61541a6a0d7fb8d674ebd3756ad9e930ec44eaf2f27c95c
@@ -33,5 +27,5 @@ fileignoreconfig:
   checksum: cfb7f8f47c809e2bbe84b7e5ea1b880954dcbce76ea05b93c42272446b9418f4
   ignore_detectors: []
 - filename: ingestion/drupal.py
-  checksum: 1c743d48c7490141cb9895b97ecc682b9a74b377460da05251496c679e61b1d5
+  checksum: a0aa5da7f6b48d563fa060b7c804689b9c72e563481c58b4d59792b7eaf7f9ba
   ignore_detectors: []

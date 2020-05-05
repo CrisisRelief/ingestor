@@ -2,3 +2,4 @@
 
 name: ingest organisations from CrisisApp Drupal Test site
 drupal_base_url: https://test.crisis.app/
+form_id: resource_intake
