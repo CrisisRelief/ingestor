@@ -23,8 +23,19 @@ class Drupal:
             raise UserWarning(
                 f"error logging in. response: {resp}\n{resp.headers}\n{resp.text}")
 
-    def get_form_entries_df(self, form_name):
+    def get_form_entries_df(self, form_id):
         # TODO: test and implement get_form_entries_df
+
+        # Step 1: Get a list of webforms from https://test.crisis.app/jsonapi/webform/webform
+
+        # Step 2: Validate that form_id exists
+
+        # Step 3: get all of the `attributes.drupal_internal__sid` and `attributes.changed` values for the form from https://test.crisis.app/jsonapi/webform_submission/{form_id}
+
+        # Step 4 (optional): check if there are any forms with mod_time greater than the last time this importer ran
+
+        # Step 5: Download the `data` from each sid using https://test.crisis.app/webform_rest/{webform_id}/submission/{sid}
+
         # The output needs to be a dataframe, e.g. :
 
         rows = [
