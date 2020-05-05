@@ -2,4 +2,5 @@ flake8
 pytest
 yamllint
 pytest-watch
+responses
 -r requirements.txt

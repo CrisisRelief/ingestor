@@ -19,16 +19,21 @@ class Drupal:
                 'op': 'Log+in'
             }
         )
-        if len(self.session.cookies) == 0:
-            raise UserWarning(
-                f"error logging in. response: {resp}\n{resp.headers}\n{resp.text}")
+        for key, value in self.session.cookies.items():
+            if key.startswith('SSESS'):
+                return
+        raise UserWarning(
+            f'error logging in. '
+            f'\nresponse: {resp}\n{resp.headers}\n{resp.text}'
+            f'\ncookies: {self.session.cookies.items()}'
+        )
 
     def get_form_entry_meta(self, form_id):
         # TODO: test and implement this
 
-        # Step 1: Get a list of webforms from f'{self.base_url}jsonapi/webform/webform'
+        # Step 1 (optional): Get a list of webforms from f'{self.base_url}jsonapi/webform/webform'
 
-        # Step 2: Validate that form_id exists in the forms from the previous step
+        # Step 2 (optional): validate that form_id exists in the forms from the previous step
 
         # Step 3: return the `data` attribute of the `json.loads` output for the form from f'{self.base_url}jsonapi/webform_submission/{form_id}'
 
@@ -44,23 +49,23 @@ class Drupal:
                 }
                 },
                 "attributes": {
-                "serial": 5,
-                "drupal_internal__sid": 86,
-                "token": "_-j6SRIMzucYSPExJABJH_53VxvV1OHkMHuHPWGmgRo",
-                "uri": "/addresource",
-                "created": "2020-04-08T04:53:07+00:00",
-                "completed": "2020-04-08T04:53:07+00:00",
-                "changed": "2020-04-08T04:53:07+00:00",
-                "in_draft": False,
-                "current_page": None,
-                "remote_addr": "114.198.124.100",
-                "langcode": "en",
-                "entity_type": "node",
-                "entity_id": "82",
-                "locked": False,
-                "sticky": False,
-                "notes": None,
-                "metatag": None
+                    "serial": 5,
+                    "drupal_internal__sid": 86,
+                    "token": "_-j6SRIMzucYSPExJABJH_53VxvV1OHkMHuHPWGmgRo",
+                    "uri": "/addresource",
+                    "created": "2020-04-08T04:53:07+00:00",
+                    "completed": "2020-04-08T04:53:07+00:00",
+                    "changed": "2020-04-08T04:53:07+00:00",
+                    "in_draft": False,
+                    "current_page": None,
+                    "remote_addr": "114.198.124.100",
+                    "langcode": "en",
+                    "entity_type": "node",
+                    "entity_id": "82",
+                    "locked": False,
+                    "sticky": False,
+                    "notes": None,
+                    "metatag": None
                 },
                 "relationships": {
                 "uid": {

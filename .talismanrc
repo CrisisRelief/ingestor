@@ -29,3 +29,12 @@ fileignoreconfig:
 - filename: ingestion/drupal.py
   checksum: a0aa5da7f6b48d563fa060b7c804689b9c72e563481c58b4d59792b7eaf7f9ba
   ignore_detectors: []
+- filename: tests/data/dummy-form-data-187.json
+  checksum: 8fa0a48688bdb6809149a7a9dba750129dd350a4b95a73487c3d47a5f9f6167a
+  ignore_detectors: []
+- filename: tests/data/dummy-form-meta.json
+  checksum: 7ed78de73e8d7849e4887974519251ba74f9f959017fdc6d9d0076979e2a29d6
+  ignore_detectors: []
+- filename: tests/test_drupal.py
+  checksum: fd921f21d35dcd495e16e4854a910fb47531111fe004c9108d7fd44cbf9b162b
+  ignore_detectors: []
