@@ -38,3 +38,6 @@ fileignoreconfig:
 - filename: tests/test_drupal.py
   checksum: fd921f21d35dcd495e16e4854a910fb47531111fe004c9108d7fd44cbf9b162b
   ignore_detectors: []
+- filename: ingestion/mod_dump.py
+  checksum: b0ca491f7fb20197211810787929b1fd963fc37bb35a81189c2144c945e1fb22
+  ignore_detectors: []

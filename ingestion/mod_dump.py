@@ -1,18 +1,21 @@
 import os
+import re
 
 
-MOD_FILE_FMT = '.%s.last_mod'
+def get_mod_file(name):
+    name = re.sub(r'\W', '_', name)
+    return '.%s.last_mod' % name
 
 
 def get_last_mod_time(name):
-    mod_file = MOD_FILE_FMT % name
+    mod_file = get_mod_file(name)
     if os.path.isfile(mod_file):
         with open(mod_file) as stream:
             return stream.readline().rstrip('\n')
 
 
 def dump_this_mod_time(name, modtime_str):
-    mod_file = MOD_FILE_FMT % name
+    mod_file = get_mod_file(name)
     with open(mod_file, 'w+') as stream:
         stream.writelines([modtime_str])
 

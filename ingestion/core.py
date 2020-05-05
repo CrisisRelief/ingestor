@@ -2,6 +2,7 @@ import argparse
 import json
 import sys
 from pprint import pformat
+from datetime import datetime
 import csv
 
 import pandas as pd
@@ -9,7 +10,7 @@ from jinja2 import Template
 import yaml
 
 from .sheet import Sheet, authorize_creds
-from .mod_dump import exit_if_no_mod
+from .mod_dump import exit_if_no_mod, get_last_mod_time
 from .drupal import Drupal
 
 
@@ -121,18 +122,20 @@ def get_df_drupal(conf, creds_file, name):
 
     # extract a mapping of `attributes.drupal_internal__sid` to `attributes.changed` of the entries
     sid_modtimes = {
-        item['attributes']['drupal_internal__sid']: item['attributes']['changed']
+        item['attributes']['drupal_internal__sid']: \
+            datetime.fromisoformat(item['attributes']['changed'])
         for item in entry_meta
     }
 
     # get the most recent mod_date of entries
-    modtime_str = max(sid_modtimes.values())
-    exit_if_no_mod(name, modtime_str)
+    last_modtime = datetime.fromisoformat(get_last_mod_time(name))
+    latest_modtime = max(sid_modtimes.values())
+    exit_if_no_mod(name, latest_modtime.isoformat())
 
-    # TODO: extract all entries with mod_time greater than the last time this importer ran
-    # e.g.
-    new_entries = [187, 109, 108]
-
+    # extract all entries with mod_time greater than the last time this importer ran
+    new_entries = [
+        sid for sid, modtime in sid_modtimes.items() if modtime > last_modtime
+    ]
     return drupal.get_form_entries_df(conf, new_entries)
 
 
