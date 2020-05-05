@@ -119,13 +119,10 @@ def get_df_drupal(conf, creds_file, name):
     )
     entry_meta = drupal.get_form_entry_meta(conf['form_id'])
 
-    # TODO: extract a mapping of `attributes.drupal_internal__sid` to `attributes.changed` of the entries
-    # e.g.
+    # extract a mapping of `attributes.drupal_internal__sid` to `attributes.changed` of the entries
     sid_modtimes = {
-        86: "2020-04-08T04:53:07+00:00",
-        108: "2020-04-09T06:05:16+00:00",
-        109: "2020-04-09T07:23:11+00:00",
-        187: "2020-04-28T02:48:07+00:00",
+        item['attributes']['drupal_internal__sid']: item['attributes']['changed']
+        for item in entry_meta
     }
 
     # get the most recent mod_date of entries

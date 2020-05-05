@@ -2,7 +2,6 @@ import os
 import shutil
 import sys
 import tempfile
-from unittest.mock import MagicMock
 
 from . import REPO_ROOT, TEST_DATA
 from .helpers import ChDir
