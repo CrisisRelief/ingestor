@@ -41,3 +41,9 @@ fileignoreconfig:
 - filename: ingestion/mod_dump.py
   checksum: b0ca491f7fb20197211810787929b1fd963fc37bb35a81189c2144c945e1fb22
   ignore_detectors: []
+- filename: ingestion/update_taxonomies.py
+  checksum: 13215fcf56cdca5c772163593ece19da589a5076068559a8cd3aa3037743f150
+  ignore_detectors: []
+- filename: tests/test_drupal.py
+  checksum: f0a82114bf6bb9ddebbe76c8f614762806e908c986676b7e677339fb4d3b1959
+  ignore_detectors: []

@@ -67,3 +67,25 @@ class Drupal:
             }
         ]
         return pd.DataFrame(rows)
+
+    def get_taxonomy_terms(self, taxonomy_vocab):
+        resp_json = self.session.get(
+            f'{self.base_url}jsonapi/taxonomy_term/{taxonomy_vocab}'
+        ).json()
+
+        uuid_tids = {
+            term['id']: term['attributes']['drupal_internal__tid']
+            for term in resp_json['data']
+        }
+
+        return [
+            {
+                'id': term['attributes']['drupal_internal__tid'],
+                'name': term['attributes']['name'],
+                'parents': [
+                    uuid_tids[parent['id']]
+                    for parent in term['relationships']['parent']['data']
+                    if parent['id'] in uuid_tids
+                ]
+            } for term in resp_json['data']
+        ]

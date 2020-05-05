@@ -1,17 +1,17 @@
 import argparse
+import csv
 import json
 import sys
-from pprint import pformat
 from datetime import datetime
-import csv
+from pprint import pformat
 
 import pandas as pd
-from jinja2 import Template
 import yaml
+from jinja2 import Template
 
-from .sheet import Sheet, authorize_creds
-from .mod_dump import exit_if_no_mod, get_last_mod_time
 from .drupal import Drupal
+from .mod_dump import exit_if_no_mod, get_last_mod_time
+from .sheet import Sheet, authorize_creds
 
 
 def epprint(*args, **kwargs):
@@ -155,7 +155,10 @@ def main(args):
     if args.input_source == 'gsheet':
         aggregate = get_df_gsheets(conf, args.creds_file, args.name)
         xform_kwargs = {
-            'taxonomy': conf.get('taxonomy'),
+            'taxonomy': {
+                taxonomy['id']: taxonomy['name']
+                for taxonomy in conf.get('taxonomy')
+            },
             'taxonomy_fields': conf.get('taxonomy_fields')
         }
     elif args.input_source == 'drupal':

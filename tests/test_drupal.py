@@ -72,7 +72,7 @@ class TestDrupal:
         dummy_meta_path = path_join(TEST_DATA, 'dummy-form-meta.json')
         with open(dummy_meta_path) as stream:
             responses.add(
-                'POST',
+                'GET',
                 'http://test.com/jsonapi/webform_submission/resource_intake',
                 status=200,
                 json=json.load(stream)
@@ -103,7 +103,7 @@ class TestDrupal:
         dummy_data_path = path_join(TEST_DATA, 'dummy-form-data-187.json')
         with open(dummy_data_path) as stream:
             responses.add(
-                'POST',
+                'GET',
                 'http://test.com/webform_rest/resource_intake/submission/187',
                 status=200,
                 json=json.load(stream)
@@ -120,3 +120,35 @@ class TestDrupal:
         # Then
         assert not entries.empty
         assert isinstance(entries, pd.DataFrame)
+
+    @responses.activate
+    def test_get_taxonomy_terms_format(self):
+        # Given
+        responses.add(
+            'POST',
+            'http://test.com/user/login',
+            status=200,
+            headers=self.cookie_headers
+        )
+        dummy_data_path = path_join(TEST_DATA, 'dummy-taxonomy-data.json')
+        with open(dummy_data_path) as stream:
+            responses.add(
+                'GET',
+                'http://test.com/jsonapi/taxonomy_term/resource_type',
+                status=200,
+                json=json.load(stream)
+            )
+        drupal = Drupal(
+            base_url='http://test.com/',
+            username='username',
+            password='password'
+        )
+
+        # When
+        taxonomies = drupal.get_taxonomy_terms('resource_type')
+
+        # Then
+        assert taxonomies
+        assert taxonomies[0]['id']
+        assert taxonomies[0]['name']
+        assert isinstance(taxonomies[0]['parents'], list)

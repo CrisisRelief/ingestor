@@ -86,11 +86,11 @@ class TestCore:
                 'corge': "{{ record['grault'] or '' }}",
                 'garply': "{{ record['waldo'] or '' }}"
             },
-            'taxonomy': {
-                1: "corge",
-                68: "grault",
-                70: "fred",
-            },
+            'taxonomy': [
+                {'id': 1, 'name': "corge", 'parents': []},
+                {'id': 68, 'name': "grault", 'parents': []},
+                {'id': 70, 'name': "fred", 'parents': []},
+            ],
             'taxonomy_fields': [
                 'garply', 'waldo'
             ]
