@@ -32,7 +32,7 @@ def parse_args(argv):
     parser.add_argument(
         '-c', '--config-file', default='config.yml')
     parser.add_argument(
-        '-s', '--schema-file', default='schema-vue.yaml')
+        '-s', '--schema-file', default='schema-gsheet-vue.yaml')
     parser.add_argument(
         '-S', '--input-source', default='gsheet'
     )
