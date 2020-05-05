@@ -129,6 +129,5 @@ dmypy.json
 .pyre/
 credentials.json
 organisations.json
-.last_mod
-.ingestion.last_mod
+*.last_mod
 creds-drupal-dev.yml

@@ -31,12 +31,14 @@ class TestCore:
         expected = argparse.Namespace(
             creds_file='tests/data/dummy-credentials.json',
             config_file='tests/data/dummy-config.yml',
+            taxonomy_file='tests/data/dummy-taxonomy.yml',
             schema_file='tests/data/dummy-schema.yml',
             output_file='tests/data/dummy-output.json',
         )
         argv = shlex.split(
             '--creds-file tests/data/dummy-credentials.json'
             ' --config-file tests/data/dummy-config.yml'
+            ' --taxonomy-file tests/data/dummy-taxonomy.yml'
             ' --schema-file tests/data/dummy-schema.yml'
             ' --output-file tests/data/dummy-output.json'
         )
@@ -53,12 +55,14 @@ class TestCore:
         expected = argparse.Namespace(
             creds_file='tests/data/dummy-credentials.json',
             config_file='tests/data/dummy-config.yml',
+            taxonomy_file='tests/data/dummy-taxonomy.yml',
             schema_file='tests/data/dummy-schema.yml',
             output_file='/dev/stdout',
         )
         argv = shlex.split(
             '--creds-file tests/data/dummy-credentials.json'
             ' --config-file tests/data/dummy-config.yml'
+            ' --taxonomy-file tests/data/dummy-taxonomy.yml'
             ' --schema-file tests/data/dummy-schema.yml'
         )
 
@@ -93,9 +97,10 @@ class TestCore:
         }
         dummy_config_file = os.path.join(TEST_DATA, 'dummy-config.yml')
         dummy_schema_file = os.path.join(TEST_DATA, 'dummy-schema.yml')
+        dummy_taxonomy_file = os.path.join(TEST_DATA, 'dummy-taxonomy.yml')
 
         # When
-        result = parse_config(dummy_config_file, dummy_schema_file)
+        result = parse_config(dummy_config_file, dummy_schema_file, dummy_taxonomy_file)
 
         # Then
         assert expected == result
@@ -201,6 +206,7 @@ class TestCore:
             for dummy_file in [
                 'dummy-credentials.json',
                 'dummy-config.yml',
+                'dummy-taxonomy.yml',
                 'dummy-schema.yml',
             ]:
                 dummy_src = os.path.join(TEST_DATA, dummy_file)
@@ -209,6 +215,7 @@ class TestCore:
             argv = shlex.split(
                 '--creds-file dummy-credentials.json'
                 ' --config-file dummy-config.yml'
+                ' --taxonomy-file dummy-taxonomy.yml'
                 ' --schema-file dummy-schema.yml'
                 ' --output-file dummy-output.json'
             )
@@ -241,6 +248,7 @@ class TestCore:
             for dummy_file in [
                 'dummy-credentials.json',
                 'dummy-config.yml',
+                'dummy-taxonomy.yml',
                 'dummy-schema.yml',
             ]:
                 dummy_src = os.path.join(TEST_DATA, dummy_file)
@@ -249,6 +257,7 @@ class TestCore:
             argv = shlex.split(
                 '--creds-file dummy-credentials.json'
                 ' --config-file dummy-config.yml'
+                ' --taxonomy-file dummy-taxonomy.yml'
                 ' --schema-file dummy-schema.yml'
                 ' --output-file dummy-output.csv'
                 ' --output-format csv'

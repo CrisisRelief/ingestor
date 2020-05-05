@@ -18,11 +18,13 @@ def epprint(*args, **kwargs):
     print(pformat(*args, **kwargs), file=sys.stderr)
 
 
-def parse_config(config_file, schema_file):
+def parse_config(config_file, schema_file, taxonomy_file):
     with open(config_file) as stream:
         conf = yaml.safe_load(stream)
     with open(schema_file) as stream:
         conf['schema_mapping'] = yaml.safe_load(stream)
+    with open(taxonomy_file) as stream:
+        conf['taxonomy'] = yaml.safe_load(stream)
     return conf
 
 
@@ -33,7 +35,9 @@ def parse_args(argv):
     parser.add_argument(
         '-c', '--config-file', default='config.yml')
     parser.add_argument(
-        '-s', '--schema-file', default='schema-gsheet-vue.yaml')
+        '-s', '--schema-file', default='schema-gsheet-vue.yml')
+    parser.add_argument(
+        '-t', '--taxonomy-file', default='taxonomy-drupal.yml')
     parser.add_argument(
         '-S', '--input-source', default='gsheet'
     )
@@ -122,25 +126,29 @@ def get_df_drupal(conf, creds_file, name):
 
     # extract a mapping of `attributes.drupal_internal__sid` to `attributes.changed` of the entries
     sid_modtimes = {
-        item['attributes']['drupal_internal__sid']: \
+        item['attributes']['drupal_internal__sid']:
             datetime.fromisoformat(item['attributes']['changed'])
         for item in entry_meta
     }
 
     # get the most recent mod_date of entries
-    last_modtime = datetime.fromisoformat(get_last_mod_time(name))
+    last_mod_str = get_last_mod_time(name)
+    last_modtime = datetime.fromisoformat(last_mod_str) if last_mod_str else None
     latest_modtime = max(sid_modtimes.values())
     exit_if_no_mod(name, latest_modtime.isoformat())
 
     # extract all entries with mod_time greater than the last time this importer ran
-    new_entries = [
-        sid for sid, modtime in sid_modtimes.items() if modtime > last_modtime
-    ]
+    if last_modtime:
+        new_entries = [
+            sid for sid, modtime in sid_modtimes.items() if modtime > last_modtime
+        ]
+    else:
+        new_entries = sid_modtimes.keys()
     return drupal.get_form_entries_df(conf, new_entries)
 
 
 def main(args):
-    conf = parse_config(args.config_file, args.schema_file)
+    conf = parse_config(args.config_file, args.schema_file, args.taxonomy_file)
     epprint(conf)
 
     xform_kwargs = {}
