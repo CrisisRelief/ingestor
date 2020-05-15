@@ -17,7 +17,7 @@ try:
     PATH = sys.path
     sys.path.append(REPO_ROOT)
 
-    from ingestion.core import parse_args, parse_config, xform_df_pre_json, get_category_ids, main
+    from ingestion.core import parse_args, parse_config, xform_df_pre_output, get_category_ids, main
 finally:
     sys.path = PATH
 
@@ -143,7 +143,7 @@ class TestCore:
         ]
 
         # When
-        transformed = xform_df_pre_json(df_in, schema_mapping)
+        transformed = xform_df_pre_output(df_in, schema_mapping)
 
         # Then
         assert expected == transformed
@@ -162,7 +162,7 @@ class TestCore:
         ]
 
         # When
-        transformed = xform_df_pre_json(df_in, schema_mapping)
+        transformed = xform_df_pre_output(df_in, schema_mapping)
 
         # Then
         assert expected == transformed
@@ -192,7 +192,7 @@ class TestCore:
         ]
 
         # When
-        transformed = xform_df_pre_json(df_in, schema_mapping, taxonomies, taxonomy_fields)
+        transformed = xform_df_pre_output(df_in, schema_mapping, taxonomies, taxonomy_fields)
 
         # Then
         assert expected == transformed
@@ -238,6 +238,50 @@ class TestCore:
             with open('dummy-output.json') as stream:
                 result_json = json.load(stream)
             assert result_json == expected_json
+
+    def test_main_creates_csv_file(self):
+        with \
+                tempfile.TemporaryDirectory() as tempdir, \
+                ChDir(tempdir):
+
+            # Given
+            for dummy_file in [
+                'dummy-credentials.json',
+                'dummy-config.yml',
+                'dummy-taxonomy.yml',
+                'dummy-schema.yml',
+            ]:
+                dummy_src = os.path.join(TEST_DATA, dummy_file)
+                dummy_dst = os.path.join(tempdir, dummy_file)
+                shutil.copy(dummy_src, dummy_dst)
+            argv = shlex.split(
+                '--creds-file dummy-credentials.json'
+                ' --config-file dummy-config.yml'
+                ' --taxonomy-file dummy-taxonomy.yml'
+                ' --schema-file dummy-schema.yml'
+                ' --output-file dummy-output.csv'
+                ' --output-format csv'
+            )
+            args = parse_args(argv)
+            df_in = pd.DataFrame([
+                ['a', 'b', None, 'fred, grault'],
+                ['d', 'e', 'f', 'corge, FRED ']
+            ], columns=['foo', 'waldo', 'grault', 'plugh'])
+            mock_get_df_gsheets = MagicMock()
+            mock_get_df_gsheets.return_value = df_in
+
+            with open(os.path.join(TEST_DATA, 'dummy-output.csv')) as stream:
+                expected_dicts = list(csv.DictReader(stream))
+
+            # When
+            with patch('ingestion.core.get_df_gsheets', mock_get_df_gsheets):
+                main(args)
+
+            # Then
+            with open('dummy-output.csv') as stream:
+                result_dicts = list(csv.DictReader(stream))
+
+            assert result_dicts == expected_dicts
 
     def test_main_creates_csv_file(self):
         with \

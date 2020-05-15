@@ -76,8 +76,7 @@ def get_category_ids(record, taxonomy, taxonomy_fields):
     return list(category_ids)
 
 
-# TODO: rename pre_json -> pre_output
-def xform_df_record_pre_json(record, schema_mapping, taxonomy=None, taxonomy_fields=None):
+def xform_df_record_pre_output(record, schema_mapping, taxonomy=None, taxonomy_fields=None):
     result = {}
     category_ids = []
     if taxonomy and taxonomy_fields:
@@ -89,12 +88,11 @@ def xform_df_record_pre_json(record, schema_mapping, taxonomy=None, taxonomy_fie
     return result
 
 
-# TODO: rename pre_json -> pre_output
-def xform_df_pre_json(frame, schema_mapping, taxonomy=None, taxonomy_fields=None):
+def xform_df_pre_output(frame, schema_mapping, taxonomy=None, taxonomy_fields=None):
     return list(filter(
         None,
         [
-            xform_df_record_pre_json(row, schema_mapping, taxonomy, taxonomy_fields)
+            xform_df_record_pre_output(row, schema_mapping, taxonomy, taxonomy_fields)
             for row in frame.to_dict('records')
         ]
     ))
@@ -167,7 +165,7 @@ def main(args):
     if args.limit:
         aggregate = aggregate.head(int(args.limit))
 
-    transformed = xform_df_pre_json(
+    transformed = xform_df_pre_output(
         aggregate,
         conf['schema_mapping'],
         **xform_kwargs
