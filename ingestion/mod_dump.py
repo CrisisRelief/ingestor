@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+from sys import stderr
 
 
 def get_mod_file(name):
@@ -23,9 +24,9 @@ def dump_this_mod_time(name, modtime_str):
 
 
 def mod_since_last_run(name, current_mod_str):
-    print("current mod str", current_mod_str)
+    print("current mod str", current_mod_str, file=stderr)
     last_mod_str = get_last_mod_time(name)
-    print("last mod str", last_mod_str)
+    print("last mod str", last_mod_str, file=stderr)
     return current_mod_str != get_last_mod_time(name)
 
 
@@ -33,5 +34,5 @@ def exit_if_no_mod(name, current_mod_str):
     modified = mod_since_last_run(name, current_mod_str)
     dump_this_mod_time(name, current_mod_str)
     if not modified:
-        print("exiting")
+        print("exiting", file=stderr)
         sys.exit()
