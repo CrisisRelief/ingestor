@@ -12,6 +12,7 @@ install_reqs:
 lint:
 	flake8
 	yamllint .
+	pylint ingestor
 
 test:
 	py.test --verbose --color=yes tests
