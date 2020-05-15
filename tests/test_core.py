@@ -1,12 +1,12 @@
 import argparse
+import csv
 import json
 import os
 import shlex
-import csv
 import shutil
 import sys
 import tempfile
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
 import pandas as pd
 
@@ -17,7 +17,8 @@ try:
     PATH = sys.path
     sys.path.append(REPO_ROOT)
 
-    from ingestion.core import parse_args, parse_config, xform_df_pre_output, get_category_ids, main
+    from ingestion.core import (parse_args, parse_config, xform_df_pre_output,
+                                get_category_ids, main, xform_cats_drupal_taxonomy)
 finally:
     sys.path = PATH
 
@@ -282,3 +283,29 @@ class TestCore:
                 result_dicts = list(csv.DictReader(stream))
 
             assert result_dicts == expected_dicts
+
+    def test_xform_cats_drupal_taxonomy_propagate(self):
+        # Given
+        record = {
+            'foo': 'd',
+            'resource_category': [1],
+            'waldo': ''
+        }
+        taxonomy = [
+            {'id': 1, 'name': "corge", 'parents': [70]},
+            {'id': 68, 'name': "grault", 'parents': []},
+            {'id': 70, 'name': "fred", 'parents': [68]},
+        ]
+        taxonomy_ids_field = 'resource_category'
+        expected = record.copy()
+        expected.update(
+            category='grault',
+            category_sub='fred',
+            category_sub_sub='corge',
+        )
+
+        # When
+        result = xform_cats_drupal_taxonomy(taxonomy, taxonomy_ids_field)(record)
+
+        # Then
+        assert sorted(result.items()) == sorted(expected.items())

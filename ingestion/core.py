@@ -77,11 +77,18 @@ def get_category_ids(record, taxonomy, taxonomy_fields):
     return list(category_ids)
 
 
-def xform_df_record_pre_output(record, schema_mapping, taxonomy=None, taxonomy_fields=None):
+def xform_df_record_pre_output(record,
+                               schema_mapping,
+                               taxonomy_names=None,
+                               taxonomy_fields=None,
+                               xform_extras=None):
     result = {}
     category_ids = []
-    if taxonomy and taxonomy_fields:
-        category_ids = get_category_ids(record, taxonomy, taxonomy_fields)
+    if taxonomy_names and taxonomy_fields:
+        category_ids = get_category_ids(record, taxonomy_names, taxonomy_fields)
+    if xform_extras:
+        for xform_extra in xform_extras:
+            record = xform_extra(record)
     for key, value in schema_mapping.items():
         result[key] = Template(value).render(record=record, category_ids=category_ids)
     if not any(result.values()):
@@ -89,14 +96,16 @@ def xform_df_record_pre_output(record, schema_mapping, taxonomy=None, taxonomy_f
     return result
 
 
-def xform_df_pre_output(frame, schema_mapping, taxonomy=None, taxonomy_fields=None):
-    return list(filter(
-        None,
-        [
-            xform_df_record_pre_output(row, schema_mapping, taxonomy, taxonomy_fields)
-            for row in frame.to_dict('records')
-        ]
-    ))
+def xform_df_pre_output(frame,
+                        schema_mapping,
+                        taxonomy_names=None,
+                        taxonomy_fields=None,
+                        xform_extras=None):
+    return list(
+        filter(None, [
+            xform_df_record_pre_output(row, schema_mapping, taxonomy_names, taxonomy_fields,
+                                       xform_extras) for row in frame.to_dict('records')
+        ]))
 
 
 def get_df_gsheets(conf, creds_file, name):
@@ -147,6 +156,45 @@ def get_df_drupal(conf, creds_file, name):
     return drupal.get_form_entries_df(conf['form_id'], new_entries)
 
 
+def _process_additions(taxonomy):
+    additions = {}
+    unprocessed = taxonomy.copy()
+    while unprocessed:
+        taxonomy_term = unprocessed.pop()
+        taxonomy_id, taxonomy_parents = taxonomy_term['id'], taxonomy_term['parents']
+        if not taxonomy_parents:
+            additions[taxonomy_id] = {'category': taxonomy_term['name']}
+            continue
+        for parent_id in taxonomy_parents:
+            if parent_id in additions:
+                additions[taxonomy_id] = additions[parent_id].copy()
+                depth = len(additions[taxonomy_id])
+                key = 'category' + '_sub' * depth
+                additions[taxonomy_id][key] = taxonomy_term['name']
+                break
+        if taxonomy_id not in additions:
+            unprocessed.insert(0, taxonomy_term)
+    return additions
+
+
+def xform_cats_drupal_taxonomy(taxonomy, taxonomy_ids_field):
+    additions = _process_additions(taxonomy)
+
+    def xform_cats_drupal(record):
+        taxonomy_ids = record[taxonomy_ids_field]
+        updates = {}
+        for taxonomy_id in taxonomy_ids:
+            for key, value in additions[int(taxonomy_id)].items():
+                if key in updates:
+                    updates[key] += f', {value}'
+                else:
+                    updates[key] = value
+        record.update(updates)
+        return record
+
+    return xform_cats_drupal
+
+
 def main(args):
     epprint(vars(args))
     conf = parse_config(args.config_file, args.schema_file, args.taxonomy_file)
@@ -155,15 +203,18 @@ def main(args):
     xform_kwargs = {}
     if args.input_source == 'gsheet':
         aggregate = get_df_gsheets(conf, args.creds_file, args.name)
-        xform_kwargs = {
-            'taxonomy': {
-                taxonomy['id']: taxonomy['name']
-                for taxonomy in conf.get('taxonomy')
-            },
-            'taxonomy_fields': conf.get('taxonomy_fields')
-        }
+        xform_kwargs.update(
+            taxonomy_fields=conf.get('taxonomy_fields'),
+            taxonomy_names={
+                taxonomy_term['id']: taxonomy_term['name']
+                for taxonomy_term in conf.get('taxonomy')
+            }
+        )
     elif args.input_source == 'drupal':
         aggregate = get_df_drupal(conf, args.creds_file, args.name)
+        xform_kwargs.update(xform_extras=[
+            xform_cats_drupal_taxonomy(conf.get('taxonomy'), conf.get('taxonomy_ids_field'))
+        ])
 
     if args.limit:
         aggregate = aggregate.head(int(args.limit))
