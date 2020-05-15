@@ -3,4 +3,6 @@ pytest
 yamllint
 pytest-watch
 responses
+pylint
+yapf
 -r requirements.txt

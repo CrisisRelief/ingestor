@@ -12,6 +12,7 @@ def get_last_mod_time(name):
     if os.path.isfile(mod_file):
         with open(mod_file) as stream:
             return stream.readline().rstrip('\n')
+    return None
 
 
 def dump_this_mod_time(name, modtime_str):

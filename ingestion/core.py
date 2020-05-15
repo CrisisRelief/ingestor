@@ -85,7 +85,7 @@ def xform_df_record_pre_json(record, schema_mapping, taxonomy=None, taxonomy_fie
     for key, value in schema_mapping.items():
         result[key] = Template(value).render(record=record, category_ids=category_ids)
     if not any(result.values()):
-        return
+        return None
     return result
 
 
@@ -101,8 +101,8 @@ def xform_df_pre_json(frame, schema_mapping, taxonomy=None, taxonomy_fields=None
 
 
 def get_df_gsheets(conf, creds_file, name):
-    gc = authorize_creds(creds_file)
-    sheet = Sheet(gc, conf['spreadsheet_key'])
+    gcs = authorize_creds(creds_file)
+    sheet = Sheet(gcs, conf['spreadsheet_key'])
     exit_if_no_mod(name, sheet.modtime_str)
     skip_rows = conf.get('skip_rows', 0)
     return pd.concat([
@@ -111,7 +111,7 @@ def get_df_gsheets(conf, creds_file, name):
             {'__WORKSHEET': worksheet_spec.get('category', worksheet_spec['name'])})
         for worksheet_spec in conf['worksheets']
     ],
-                          axis=0)
+                     axis=0)
 
 
 def get_df_drupal(conf, creds_file, name):

@@ -1,6 +1,7 @@
-import requests
-import pandas as pd
 import json
+
+import pandas as pd
+import requests
 
 
 class Drupal:
@@ -20,7 +21,7 @@ class Drupal:
                 'op': 'Log+in'
             }
         )
-        for key, value in self.session.cookies.items():
+        for key, _ in self.session.cookies.items():
             if key.startswith('SSESS'):
                 return
         raise UserWarning(
@@ -41,6 +42,8 @@ class Drupal:
 
         # e.g.:
 
+        if self:  # bypasses linter warnings in stub
+            pass
         with open('tests/data/dummy-form-meta.json') as stream:
             return json.load(stream)['data']
 
@@ -51,6 +54,9 @@ class Drupal:
         # f'{self.base_url}webform_rest/{webform_id}/submission/{sid}'
 
         # Step 2: The output needs to be a dataframe, e.g. :
+
+        if self:  # bypasses linter warnings in stub
+            pass
 
         rows = [
             {
