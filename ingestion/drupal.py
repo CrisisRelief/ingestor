@@ -28,13 +28,25 @@ class Drupal:
             f'\ncookies: {self.session.cookies.items()}'
         )
 
+    def _get_jsonapi_data(self, endpoint):
+        """
+        return the `data` attribute of all pages for `endpoint`
+        """
+        data = []
+        next_uri = f'{self.base_url}jsonapi/{endpoint}'
+        while next_uri:
+            resp = self.session.get(next_uri)
+            resp_json = resp.json()
+            data.extend(resp_json['data'])
+            next_uri = resp_json.get('links', {}).get('next', {}).get('href')
+        return data
+
     def get_form_entry_meta(self, form_id):
         """
         return the `data` attribute of the `json.loads` output for the form from
         """
 
-        resp = self.session.get(f'{self.base_url}jsonapi/webform_submission/{form_id}')
-        return resp.json()["data"]
+        return self._get_jsonapi_data(f'webform_submission/{form_id}')
 
     def get_form_entries_df(self, form_id, sids):
         """
@@ -49,8 +61,7 @@ class Drupal:
         return pd.DataFrame(rows)
 
     def get_taxonomy_terms(self, taxonomy_vocab):
-        resp = self.session.get(f'{self.base_url}jsonapi/taxonomy_term/{taxonomy_vocab}')
-        resp_json_data = resp.json()['data']
+        resp_json_data = self._get_jsonapi_data(f'taxonomy_term/{taxonomy_vocab}')
 
         uuid_tids = {
             term['id']: term['attributes']['drupal_internal__tid']

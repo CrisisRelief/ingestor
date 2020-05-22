@@ -130,6 +130,14 @@ class TestDrupal:
             status=200,
             headers=self.cookie_headers
         )
+        dummy_data_path_page_2 = path_join(TEST_DATA, 'dummy-taxonomy-data-page-2.json')
+        with open(dummy_data_path_page_2) as stream:
+            responses.add(
+                'GET',
+                'http://test.com/jsonapi/taxonomy_term/resource_type?page%5Boffset%5D=50&page%5Blimit%5D=50',
+                status=200,
+                json=json.load(stream)
+            )
         dummy_data_path = path_join(TEST_DATA, 'dummy-taxonomy-data.json')
         with open(dummy_data_path) as stream:
             responses.add(
@@ -151,4 +159,5 @@ class TestDrupal:
         assert taxonomies
         assert taxonomies[0]['id']
         assert taxonomies[0]['name']
+        assert len(taxonomies) == 65
         assert isinstance(taxonomies[0]['parents'], list)

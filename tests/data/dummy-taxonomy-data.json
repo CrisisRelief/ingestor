@@ -11,7 +11,7 @@
             "id": "fe0e77d6-7443-4478-9be6-381fe3b8fb8e",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e"
                 }
             },
             "attributes": {
@@ -38,10 +38,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/relationships/vid"
                         }
                     }
                 },
@@ -49,10 +49,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/relationships/revision_user"
                         }
                     }
                 },
@@ -75,10 +75,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/fe0e77d6-7443-4478-9be6-381fe3b8fb8e/relationships/parent"
                         }
                     }
                 }
@@ -89,7 +89,7 @@
             "id": "3ae6ca44-076e-4520-8ffc-0792085ce04f",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f"
                 }
             },
             "attributes": {
@@ -116,10 +116,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/relationships/vid"
                         }
                     }
                 },
@@ -127,10 +127,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/relationships/revision_user"
                         }
                     }
                 },
@@ -153,10 +153,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3ae6ca44-076e-4520-8ffc-0792085ce04f/relationships/parent"
                         }
                     }
                 }
@@ -167,7 +167,7 @@
             "id": "1e888ae7-d717-44e6-afda-32a778acc2f8",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8"
                 }
             },
             "attributes": {
@@ -194,10 +194,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/relationships/vid"
                         }
                     }
                 },
@@ -205,10 +205,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/relationships/revision_user"
                         }
                     }
                 },
@@ -231,10 +231,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/1e888ae7-d717-44e6-afda-32a778acc2f8/relationships/parent"
                         }
                     }
                 }
@@ -245,7 +245,7 @@
             "id": "a13dd49e-f14c-457d-b35f-041c7d6f29e8",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8"
                 }
             },
             "attributes": {
@@ -272,10 +272,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/relationships/vid"
                         }
                     }
                 },
@@ -283,10 +283,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/relationships/revision_user"
                         }
                     }
                 },
@@ -303,10 +303,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/a13dd49e-f14c-457d-b35f-041c7d6f29e8/relationships/parent"
                         }
                     }
                 }
@@ -317,7 +317,7 @@
             "id": "f4d41c6e-2ca1-4f82-bac2-c00662bb37cf",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf"
                 }
             },
             "attributes": {
@@ -344,10 +344,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/relationships/vid"
                         }
                     }
                 },
@@ -355,10 +355,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/relationships/revision_user"
                         }
                     }
                 },
@@ -371,10 +371,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/f4d41c6e-2ca1-4f82-bac2-c00662bb37cf/relationships/parent"
                         }
                     }
                 }
@@ -385,7 +385,7 @@
             "id": "eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4"
                 }
             },
             "attributes": {
@@ -412,10 +412,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/relationships/vid"
                         }
                     }
                 },
@@ -423,10 +423,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/relationships/revision_user"
                         }
                     }
                 },
@@ -439,10 +439,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/eb53ff81-ce9d-4f65-ae8d-c120ddb51ec4/relationships/parent"
                         }
                     }
                 }
@@ -453,7 +453,7 @@
             "id": "404685e0-bbc0-4315-ba18-93face11099c",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c"
                 }
             },
             "attributes": {
@@ -480,10 +480,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/relationships/vid"
                         }
                     }
                 },
@@ -491,10 +491,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/relationships/revision_user"
                         }
                     }
                 },
@@ -507,10 +507,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/404685e0-bbc0-4315-ba18-93face11099c/relationships/parent"
                         }
                     }
                 }
@@ -521,7 +521,7 @@
             "id": "73ab9025-d42d-42a7-b04b-063f580a93aa",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa"
                 }
             },
             "attributes": {
@@ -552,10 +552,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/relationships/vid"
                         }
                     }
                 },
@@ -563,10 +563,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/relationships/revision_user"
                         }
                     }
                 },
@@ -579,10 +579,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/73ab9025-d42d-42a7-b04b-063f580a93aa/relationships/parent"
                         }
                     }
                 }
@@ -593,7 +593,7 @@
             "id": "78f0f546-a47e-4412-a73e-144c88e10e79",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79"
                 }
             },
             "attributes": {
@@ -620,10 +620,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/relationships/vid"
                         }
                     }
                 },
@@ -631,10 +631,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/relationships/revision_user"
                         }
                     }
                 },
@@ -647,10 +647,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/78f0f546-a47e-4412-a73e-144c88e10e79/relationships/parent"
                         }
                     }
                 }
@@ -661,7 +661,7 @@
             "id": "31e7bb69-58cc-461e-a49a-fe51d096ccdf",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf"
                 }
             },
             "attributes": {
@@ -688,10 +688,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/relationships/vid"
                         }
                     }
                 },
@@ -699,10 +699,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/relationships/revision_user"
                         }
                     }
                 },
@@ -715,10 +715,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31e7bb69-58cc-461e-a49a-fe51d096ccdf/relationships/parent"
                         }
                     }
                 }
@@ -729,7 +729,7 @@
             "id": "275db52c-d77d-4860-8978-e49e804163db",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db"
                 }
             },
             "attributes": {
@@ -756,10 +756,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/relationships/vid"
                         }
                     }
                 },
@@ -767,10 +767,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/relationships/revision_user"
                         }
                     }
                 },
@@ -783,10 +783,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/275db52c-d77d-4860-8978-e49e804163db/relationships/parent"
                         }
                     }
                 }
@@ -797,7 +797,7 @@
             "id": "ab7a725d-554f-45d9-a7f8-7b08c4e7058a",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a"
                 }
             },
             "attributes": {
@@ -824,10 +824,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/relationships/vid"
                         }
                     }
                 },
@@ -835,10 +835,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/relationships/revision_user"
                         }
                     }
                 },
@@ -851,10 +851,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab7a725d-554f-45d9-a7f8-7b08c4e7058a/relationships/parent"
                         }
                     }
                 }
@@ -865,7 +865,7 @@
             "id": "75fb5a7a-dca2-4992-b324-39222b2126c3",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3"
                 }
             },
             "attributes": {
@@ -892,10 +892,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/relationships/vid"
                         }
                     }
                 },
@@ -903,10 +903,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/relationships/revision_user"
                         }
                     }
                 },
@@ -919,10 +919,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75fb5a7a-dca2-4992-b324-39222b2126c3/relationships/parent"
                         }
                     }
                 }
@@ -933,7 +933,7 @@
             "id": "c7b71546-6f25-4da9-b1f8-87afc88a3b13",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13"
                 }
             },
             "attributes": {
@@ -960,10 +960,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/relationships/vid"
                         }
                     }
                 },
@@ -971,10 +971,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/relationships/revision_user"
                         }
                     }
                 },
@@ -987,10 +987,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c7b71546-6f25-4da9-b1f8-87afc88a3b13/relationships/parent"
                         }
                     }
                 }
@@ -1001,7 +1001,7 @@
             "id": "75395132-0953-498d-a44e-cceaba8e2512",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512"
                 }
             },
             "attributes": {
@@ -1028,10 +1028,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/relationships/vid"
                         }
                     }
                 },
@@ -1039,10 +1039,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/relationships/revision_user"
                         }
                     }
                 },
@@ -1059,10 +1059,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/75395132-0953-498d-a44e-cceaba8e2512/relationships/parent"
                         }
                     }
                 }
@@ -1073,7 +1073,7 @@
             "id": "7fcf5398-f285-45d7-9d29-675ab6946725",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725"
                 }
             },
             "attributes": {
@@ -1100,10 +1100,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/relationships/vid"
                         }
                     }
                 },
@@ -1111,10 +1111,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/relationships/revision_user"
                         }
                     }
                 },
@@ -1137,10 +1137,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7fcf5398-f285-45d7-9d29-675ab6946725/relationships/parent"
                         }
                     }
                 }
@@ -1151,7 +1151,7 @@
             "id": "72f3301e-574f-440a-a2a9-fc61e0c8f365",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365"
                 }
             },
             "attributes": {
@@ -1178,10 +1178,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/relationships/vid"
                         }
                     }
                 },
@@ -1189,10 +1189,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/relationships/revision_user"
                         }
                     }
                 },
@@ -1205,10 +1205,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/72f3301e-574f-440a-a2a9-fc61e0c8f365/relationships/parent"
                         }
                     }
                 }
@@ -1219,7 +1219,7 @@
             "id": "c2df6915-fda1-4383-80ee-f2edd69ecd71",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71"
                 }
             },
             "attributes": {
@@ -1246,10 +1246,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/relationships/vid"
                         }
                     }
                 },
@@ -1257,10 +1257,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/relationships/revision_user"
                         }
                     }
                 },
@@ -1273,10 +1273,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c2df6915-fda1-4383-80ee-f2edd69ecd71/relationships/parent"
                         }
                     }
                 }
@@ -1287,7 +1287,7 @@
             "id": "bd11ff72-ec2b-4a89-824c-d47029ff023c",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c"
                 }
             },
             "attributes": {
@@ -1314,10 +1314,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/relationships/vid"
                         }
                     }
                 },
@@ -1325,10 +1325,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/relationships/revision_user"
                         }
                     }
                 },
@@ -1341,10 +1341,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/bd11ff72-ec2b-4a89-824c-d47029ff023c/relationships/parent"
                         }
                     }
                 }
@@ -1355,7 +1355,7 @@
             "id": "3c635c10-f99e-448e-9282-0cadbba428dd",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd"
                 }
             },
             "attributes": {
@@ -1382,10 +1382,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/relationships/vid"
                         }
                     }
                 },
@@ -1393,10 +1393,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/relationships/revision_user"
                         }
                     }
                 },
@@ -1409,10 +1409,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3c635c10-f99e-448e-9282-0cadbba428dd/relationships/parent"
                         }
                     }
                 }
@@ -1423,7 +1423,7 @@
             "id": "149c5367-2bb9-4e05-b28d-3ec66d39b267",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267"
                 }
             },
             "attributes": {
@@ -1450,10 +1450,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/relationships/vid"
                         }
                     }
                 },
@@ -1461,10 +1461,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/relationships/revision_user"
                         }
                     }
                 },
@@ -1477,10 +1477,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/149c5367-2bb9-4e05-b28d-3ec66d39b267/relationships/parent"
                         }
                     }
                 }
@@ -1491,7 +1491,7 @@
             "id": "ab9a2664-5b81-4fae-bd0e-7e4c854c9b19",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19"
                 }
             },
             "attributes": {
@@ -1518,10 +1518,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/relationships/vid"
                         }
                     }
                 },
@@ -1529,10 +1529,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/relationships/revision_user"
                         }
                     }
                 },
@@ -1545,10 +1545,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab9a2664-5b81-4fae-bd0e-7e4c854c9b19/relationships/parent"
                         }
                     }
                 }
@@ -1559,7 +1559,7 @@
             "id": "8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799"
                 }
             },
             "attributes": {
@@ -1590,10 +1590,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/relationships/vid"
                         }
                     }
                 },
@@ -1601,10 +1601,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/relationships/revision_user"
                         }
                     }
                 },
@@ -1617,10 +1617,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8ecc5ad5-01e0-4afe-a159-3e6a2e3d8799/relationships/parent"
                         }
                     }
                 }
@@ -1631,7 +1631,7 @@
             "id": "4de2797d-b162-4c2c-92ed-429a7df686ac",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac"
                 }
             },
             "attributes": {
@@ -1662,10 +1662,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/relationships/vid"
                         }
                     }
                 },
@@ -1673,10 +1673,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/relationships/revision_user"
                         }
                     }
                 },
@@ -1689,10 +1689,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/4de2797d-b162-4c2c-92ed-429a7df686ac/relationships/parent"
                         }
                     }
                 }
@@ -1703,7 +1703,7 @@
             "id": "33e2f205-c16a-4483-9fc9-1c52982a8918",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918"
                 }
             },
             "attributes": {
@@ -1730,10 +1730,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/relationships/vid"
                         }
                     }
                 },
@@ -1741,10 +1741,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/relationships/revision_user"
                         }
                     }
                 },
@@ -1757,10 +1757,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/33e2f205-c16a-4483-9fc9-1c52982a8918/relationships/parent"
                         }
                     }
                 }
@@ -1771,7 +1771,7 @@
             "id": "c59ce15b-7cff-4b92-9971-287bce142ff5",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5"
                 }
             },
             "attributes": {
@@ -1798,10 +1798,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/relationships/vid"
                         }
                     }
                 },
@@ -1809,10 +1809,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/relationships/revision_user"
                         }
                     }
                 },
@@ -1825,10 +1825,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c59ce15b-7cff-4b92-9971-287bce142ff5/relationships/parent"
                         }
                     }
                 }
@@ -1839,7 +1839,7 @@
             "id": "b38d2571-135d-46fc-aba3-241fc18e40c3",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3"
                 }
             },
             "attributes": {
@@ -1866,10 +1866,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/relationships/vid"
                         }
                     }
                 },
@@ -1877,10 +1877,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/relationships/revision_user"
                         }
                     }
                 },
@@ -1893,10 +1893,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b38d2571-135d-46fc-aba3-241fc18e40c3/relationships/parent"
                         }
                     }
                 }
@@ -1907,7 +1907,7 @@
             "id": "20e8d1de-7514-479d-89f6-dce0fedf4152",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152"
                 }
             },
             "attributes": {
@@ -1934,10 +1934,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/relationships/vid"
                         }
                     }
                 },
@@ -1945,10 +1945,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/relationships/revision_user"
                         }
                     }
                 },
@@ -1961,10 +1961,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/20e8d1de-7514-479d-89f6-dce0fedf4152/relationships/parent"
                         }
                     }
                 }
@@ -1975,7 +1975,7 @@
             "id": "804c502f-dc78-4fa3-8d8f-6b8779f92557",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557"
                 }
             },
             "attributes": {
@@ -2002,10 +2002,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/relationships/vid"
                         }
                     }
                 },
@@ -2013,10 +2013,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/relationships/revision_user"
                         }
                     }
                 },
@@ -2029,10 +2029,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/804c502f-dc78-4fa3-8d8f-6b8779f92557/relationships/parent"
                         }
                     }
                 }
@@ -2043,7 +2043,7 @@
             "id": "9779ef65-e201-406f-ac0f-09cf850b2179",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179"
                 }
             },
             "attributes": {
@@ -2070,10 +2070,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/relationships/vid"
                         }
                     }
                 },
@@ -2081,10 +2081,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/relationships/revision_user"
                         }
                     }
                 },
@@ -2097,10 +2097,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/9779ef65-e201-406f-ac0f-09cf850b2179/relationships/parent"
                         }
                     }
                 }
@@ -2111,7 +2111,7 @@
             "id": "610892f9-082d-422d-b970-6344a15b2f9c",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c"
                 }
             },
             "attributes": {
@@ -2138,10 +2138,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/relationships/vid"
                         }
                     }
                 },
@@ -2149,10 +2149,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/relationships/revision_user"
                         }
                     }
                 },
@@ -2165,10 +2165,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/610892f9-082d-422d-b970-6344a15b2f9c/relationships/parent"
                         }
                     }
                 }
@@ -2179,7 +2179,7 @@
             "id": "70481737-0825-460c-bb64-85d7debd0737",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737"
                 }
             },
             "attributes": {
@@ -2210,10 +2210,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/relationships/vid"
                         }
                     }
                 },
@@ -2221,10 +2221,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/relationships/revision_user"
                         }
                     }
                 },
@@ -2237,10 +2237,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/70481737-0825-460c-bb64-85d7debd0737/relationships/parent"
                         }
                     }
                 }
@@ -2251,7 +2251,7 @@
             "id": "ae012980-0556-4b0b-ba4b-1c5389072062",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062"
                 }
             },
             "attributes": {
@@ -2278,10 +2278,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/relationships/vid"
                         }
                     }
                 },
@@ -2289,10 +2289,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/relationships/revision_user"
                         }
                     }
                 },
@@ -2305,10 +2305,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ae012980-0556-4b0b-ba4b-1c5389072062/relationships/parent"
                         }
                     }
                 }
@@ -2319,7 +2319,7 @@
             "id": "7896fd1a-4bd7-4397-bffa-e6f8934e0ebb",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb"
                 }
             },
             "attributes": {
@@ -2346,10 +2346,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/relationships/vid"
                         }
                     }
                 },
@@ -2357,10 +2357,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/relationships/revision_user"
                         }
                     }
                 },
@@ -2373,10 +2373,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/7896fd1a-4bd7-4397-bffa-e6f8934e0ebb/relationships/parent"
                         }
                     }
                 }
@@ -2387,7 +2387,7 @@
             "id": "ac28e164-0e4a-42ab-8df6-5e076dacaf87",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87"
                 }
             },
             "attributes": {
@@ -2414,10 +2414,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/relationships/vid"
                         }
                     }
                 },
@@ -2425,10 +2425,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/relationships/revision_user"
                         }
                     }
                 },
@@ -2451,10 +2451,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ac28e164-0e4a-42ab-8df6-5e076dacaf87/relationships/parent"
                         }
                     }
                 }
@@ -2465,7 +2465,7 @@
             "id": "54317f69-7444-41ec-8e84-32c8e4e7fc47",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47"
                 }
             },
             "attributes": {
@@ -2492,10 +2492,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/relationships/vid"
                         }
                     }
                 },
@@ -2503,10 +2503,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/relationships/revision_user"
                         }
                     }
                 },
@@ -2519,10 +2519,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/54317f69-7444-41ec-8e84-32c8e4e7fc47/relationships/parent"
                         }
                     }
                 }
@@ -2533,7 +2533,7 @@
             "id": "d570f519-780d-4e09-a751-5418ecd7e74f",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f"
                 }
             },
             "attributes": {
@@ -2560,10 +2560,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/relationships/vid"
                         }
                     }
                 },
@@ -2571,10 +2571,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/relationships/revision_user"
                         }
                     }
                 },
@@ -2587,10 +2587,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/d570f519-780d-4e09-a751-5418ecd7e74f/relationships/parent"
                         }
                     }
                 }
@@ -2601,7 +2601,7 @@
             "id": "31dbff3f-feab-44c2-9211-a89fa82b3c48",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48"
                 }
             },
             "attributes": {
@@ -2628,10 +2628,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/relationships/vid"
                         }
                     }
                 },
@@ -2639,10 +2639,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/relationships/revision_user"
                         }
                     }
                 },
@@ -2655,10 +2655,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/31dbff3f-feab-44c2-9211-a89fa82b3c48/relationships/parent"
                         }
                     }
                 }
@@ -2669,7 +2669,7 @@
             "id": "3f913e60-fc39-4d66-b479-cb46e87870c1",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1"
                 }
             },
             "attributes": {
@@ -2696,10 +2696,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/relationships/vid"
                         }
                     }
                 },
@@ -2707,10 +2707,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/relationships/revision_user"
                         }
                     }
                 },
@@ -2733,10 +2733,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/3f913e60-fc39-4d66-b479-cb46e87870c1/relationships/parent"
                         }
                     }
                 }
@@ -2747,7 +2747,7 @@
             "id": "91174ae1-11f2-4a0c-86e5-0136f5f5bda9",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9"
                 }
             },
             "attributes": {
@@ -2774,10 +2774,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/relationships/vid"
                         }
                     }
                 },
@@ -2785,10 +2785,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/relationships/revision_user"
                         }
                     }
                 },
@@ -2805,10 +2805,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/91174ae1-11f2-4a0c-86e5-0136f5f5bda9/relationships/parent"
                         }
                     }
                 }
@@ -2819,7 +2819,7 @@
             "id": "ab60fb21-a71f-4a7a-b23b-c8b48a005c38",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38"
                 }
             },
             "attributes": {
@@ -2846,10 +2846,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/relationships/vid"
                         }
                     }
                 },
@@ -2857,10 +2857,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/relationships/revision_user"
                         }
                     }
                 },
@@ -2877,10 +2877,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/ab60fb21-a71f-4a7a-b23b-c8b48a005c38/relationships/parent"
                         }
                     }
                 }
@@ -2891,7 +2891,7 @@
             "id": "c863da3b-a903-4282-a801-be32c96cf291",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291"
                 }
             },
             "attributes": {
@@ -2918,10 +2918,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/relationships/vid"
                         }
                     }
                 },
@@ -2929,10 +2929,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/relationships/revision_user"
                         }
                     }
                 },
@@ -2945,10 +2945,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c863da3b-a903-4282-a801-be32c96cf291/relationships/parent"
                         }
                     }
                 }
@@ -2959,7 +2959,7 @@
             "id": "755c4c94-2452-423c-9c7f-4a0d9e1c3746",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746"
                 }
             },
             "attributes": {
@@ -2986,10 +2986,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/relationships/vid"
                         }
                     }
                 },
@@ -2997,10 +2997,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/relationships/revision_user"
                         }
                     }
                 },
@@ -3017,10 +3017,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/755c4c94-2452-423c-9c7f-4a0d9e1c3746/relationships/parent"
                         }
                     }
                 }
@@ -3031,7 +3031,7 @@
             "id": "50470f84-91fd-4dc7-9513-7c94a6e67430",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430"
                 }
             },
             "attributes": {
@@ -3058,10 +3058,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/relationships/vid"
                         }
                     }
                 },
@@ -3069,10 +3069,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/relationships/revision_user"
                         }
                     }
                 },
@@ -3085,10 +3085,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/50470f84-91fd-4dc7-9513-7c94a6e67430/relationships/parent"
                         }
                     }
                 }
@@ -3099,7 +3099,7 @@
             "id": "746e398b-4fd5-47b4-b69f-19dc2ddaa934",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934"
                 }
             },
             "attributes": {
@@ -3126,10 +3126,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/relationships/vid"
                         }
                     }
                 },
@@ -3137,10 +3137,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/relationships/revision_user"
                         }
                     }
                 },
@@ -3157,10 +3157,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/746e398b-4fd5-47b4-b69f-19dc2ddaa934/relationships/parent"
                         }
                     }
                 }
@@ -3171,7 +3171,7 @@
             "id": "b8b2c565-9b02-4855-b2f4-6edcd2fd9911",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911"
                 }
             },
             "attributes": {
@@ -3198,10 +3198,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/relationships/vid"
                         }
                     }
                 },
@@ -3209,10 +3209,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/relationships/revision_user"
                         }
                     }
                 },
@@ -3225,10 +3225,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/b8b2c565-9b02-4855-b2f4-6edcd2fd9911/relationships/parent"
                         }
                     }
                 }
@@ -3239,7 +3239,7 @@
             "id": "8522a198-4902-4845-8bbf-69723bdffada",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada"
                 }
             },
             "attributes": {
@@ -3266,10 +3266,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/relationships/vid"
                         }
                     }
                 },
@@ -3277,10 +3277,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/relationships/revision_user"
                         }
                     }
                 },
@@ -3293,10 +3293,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/8522a198-4902-4845-8bbf-69723bdffada/relationships/parent"
                         }
                     }
                 }
@@ -3307,7 +3307,7 @@
             "id": "5b18be9a-8b44-4521-8a4b-b72b87e054e7",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7"
                 }
             },
             "attributes": {
@@ -3334,10 +3334,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/relationships/vid"
                         }
                     }
                 },
@@ -3345,10 +3345,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/relationships/revision_user"
                         }
                     }
                 },
@@ -3361,10 +3361,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/5b18be9a-8b44-4521-8a4b-b72b87e054e7/relationships/parent"
                         }
                     }
                 }
@@ -3375,7 +3375,7 @@
             "id": "0d4f6db3-70e9-48cc-b2b3-069ad7f76c81",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81"
                 }
             },
             "attributes": {
@@ -3402,10 +3402,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/relationships/vid"
                         }
                     }
                 },
@@ -3413,10 +3413,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/relationships/revision_user"
                         }
                     }
                 },
@@ -3429,10 +3429,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/0d4f6db3-70e9-48cc-b2b3-069ad7f76c81/relationships/parent"
                         }
                     }
                 }
@@ -3443,7 +3443,7 @@
             "id": "c90dc6de-d643-4716-a776-53b6162c275a",
             "links": {
                 "self": {
-                    "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a"
+                    "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a"
                 }
             },
             "attributes": {
@@ -3470,10 +3470,10 @@
                     },
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/vid"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/relationships/vid"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/relationships/vid"
                         }
                     }
                 },
@@ -3481,10 +3481,10 @@
                     "data": null,
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/revision_user"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/relationships/revision_user"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/relationships/revision_user"
                         }
                     }
                 },
@@ -3497,10 +3497,10 @@
                     ],
                     "links": {
                         "related": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/parent"
                         },
                         "self": {
-                            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/relationships/parent"
+                            "href": "http://test.com/jsonapi/taxonomy_term/resource_type/c90dc6de-d643-4716-a776-53b6162c275a/relationships/parent"
                         }
                     }
                 }
@@ -3509,10 +3509,10 @@
     ],
     "links": {
         "next": {
-            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type?page%5Boffset%5D=50\u0026page%5Blimit%5D=50"
+            "href": "http://test.com/jsonapi/taxonomy_term/resource_type?page%5Boffset%5D=50\u0026page%5Blimit%5D=50"
         },
         "self": {
-            "href": "https://test.crisis.app/jsonapi/taxonomy_term/resource_type"
+            "href": "http://test.com/jsonapi/taxonomy_term/resource_type"
         }
     }
 }

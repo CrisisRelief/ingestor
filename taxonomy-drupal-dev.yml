@@ -153,10 +153,12 @@
 - id: 213
   name: Community support
   parents:
+  - 224
   - 212
 - id: 214
   name: Donations drop-off
   parents:
+  - 224
   - 212
 - id: 215
   name: Emergency Alerts / Safety Information
@@ -165,6 +167,7 @@
 - id: 216
   name: Employment and businesses
   parents:
+  - 224
   - 212
 - id: 217
   name: Evacuation Centres
@@ -173,6 +176,7 @@
 - id: 218
   name: Facebook community group
   parents:
+  - 224
   - 212
 - id: 219
   name: Financial and banking
@@ -194,3 +198,64 @@
   name: Pick-up and delivery
   parents:
   - 212
+- id: 224
+  name: COVID-19
+  parents: []
+- id: 225
+  name: Feed
+  parents:
+  - 6
+- id: 226
+  name: Medical
+  parents:
+  - 6
+- id: 228
+  name: Other Pets / Small Domestic Animals
+  parents:
+  - 6
+- id: 229
+  name: Renters and housing
+  parents:
+  - 212
+- id: 230
+  name: Restaurants
+  parents:
+  - 212
+- id: 231
+  name: Reunification / Finding People
+  parents:
+  - 212
+- id: 232
+  name: Schools and education
+  parents:
+  - 212
+- id: 233
+  name: Seeking Volunteers
+  parents:
+  - 212
+  - 11
+- id: 234
+  name: Supermarkets
+  parents:
+  - 212
+- id: 235
+  name: Telecommunications
+  parents:
+  - 212
+- id: 236
+  name: Testing Clinic
+  parents:
+  - 224
+  - 212
+- id: 237
+  name: Travel advice
+  parents:
+  - 212
+- id: 238
+  name: Donation Details
+  parents:
+  - 11
+- id: 239
+  name: Campervans
+  parents:
+  - 154
