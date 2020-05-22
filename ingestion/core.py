@@ -1,10 +1,12 @@
 import argparse
 import csv
 import json
-import sys
-from datetime import datetime
-from os.path import exists as path_exists, splitext
 import math
+import sys
+import traceback
+from datetime import datetime
+from os.path import exists as path_exists
+from os.path import splitext
 from pprint import pformat
 
 import pandas as pd
@@ -100,9 +102,16 @@ def xform_df_record_pre_output(record,
     category_ids = []
     if taxonomy_names and taxonomy_fields:
         category_ids = get_category_ids(record, taxonomy_names, taxonomy_fields)
-    if xform_extras:
-        for xform_extra in xform_extras:
-            record = xform_extra(record)
+        if xform_extras:
+            for xform_extra in xform_extras:
+                try:
+                    record = xform_extra(record)
+                except Exception:
+                    eprint(
+                        f"could not calculate xform_extra {xform_extra} for record, \n"
+                        f"{traceback.format_exc()}\n"
+                        f"{record}"
+                    )
     for key, value in schema_mapping.items():
         result[key] = Template(value).render(record=record, category_ids=category_ids)
     if not any(result.values()):
