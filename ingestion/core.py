@@ -185,7 +185,7 @@ def _process_additions(taxonomy):
             if parent_id in additions:
                 additions[taxonomy_id] = additions[parent_id].copy()
                 depth = len(additions[taxonomy_id])
-                key = 'category' + '_sub' * depth
+                key = f'subcategory_{depth}' if depth else 'category'
                 additions[taxonomy_id][key] = taxonomy_term['name']
                 break
         if taxonomy_id not in additions:
