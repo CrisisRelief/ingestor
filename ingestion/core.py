@@ -2,8 +2,9 @@ import argparse
 import csv
 import json
 import sys
-from os.path import exists as path_exists
 from datetime import datetime
+from os.path import exists as path_exists, splitext
+import math
 from pprint import pformat
 
 import pandas as pd
@@ -56,6 +57,9 @@ def parse_args(argv):
         help="where to output the result (default: stdout)")
     parser.add_argument(
         '-f', '--output-format', default='json'
+    )
+    parser.add_argument(
+        '-p', '--partition', default=None, type=int, help="split the output into files with max p records"
     )
     parser.add_argument(
         '-n', '--name', default='ingestion')
@@ -288,6 +292,22 @@ def main(args):
             primary_key_field=conf['primary_key_field'],
             fieldnames=conf['schema_mapping'].keys()
         )
+    elif args.partition:
+        out_file_prefix, out_file_ext = splitext(args.output_file)
+        if not out_file_ext:
+            raise UserWarning(f"can't chunk file {args.output_file}")
+        chunks = [
+            transformed[i:i+args.partition]
+            for i in range(0, len(transformed), args.partition)
+        ]
+        chunk_digits = math.ceil(math.log(len(chunks), 10))
+        for chunk_idx, chunk in enumerate(chunks):
+            chunk_file = f'{out_file_prefix}-{str(chunk_idx).zfill(chunk_digits)}.{out_file_ext}'
+            write_output(
+                chunk, chunk_file, args.output_format,
+                fieldnames=conf['schema_mapping'].keys(),
+            )
+
     else:
         write_output(
             transformed, args.output_file, args.output_format,
