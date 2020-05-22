@@ -89,7 +89,7 @@ def get_category_ids(record, taxonomy, taxonomy_fields):
             category_ids.add(category_id)
 
     if categories:
-        eprint(f"categories {categories} not in taxonomy {taxonomy.values()}")
+        eprint(f"categories {categories} not in taxonomy")
     return list(category_ids)
 
 
@@ -102,16 +102,16 @@ def xform_df_record_pre_output(record,
     category_ids = []
     if taxonomy_names and taxonomy_fields:
         category_ids = get_category_ids(record, taxonomy_names, taxonomy_fields)
-        if xform_extras:
-            for xform_extra in xform_extras:
-                try:
-                    record = xform_extra(record)
-                except Exception:
-                    eprint(
-                        f"could not calculate xform_extra {xform_extra} for record, \n"
-                        f"{traceback.format_exc()}\n"
-                        f"{record}"
-                    )
+    if xform_extras:
+        for xform_extra in xform_extras:
+            try:
+                record = xform_extra(record)
+            except Exception:
+                eprint(
+                    f"could not calculate xform_extra {xform_extra} for record, \n"
+                    f"{traceback.format_exc()}\n"
+                    f"{record}"
+                )
     for key, value in schema_mapping.items():
         result[key] = Template(value).render(record=record, category_ids=category_ids)
     if not any(result.values()):
@@ -219,6 +219,7 @@ def xform_cats_drupal_taxonomy(taxonomy, taxonomy_ids_field):
             key: ', '.join(value)
             for key, value in updates.items()
         }
+        eprint(f"updates: \n{pformat(updates)}")
         record.update(updates)
         return record
 
