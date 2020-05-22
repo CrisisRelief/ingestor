@@ -205,10 +205,10 @@ class TestCore:
 
             # Given
             for dummy_file in [
-                'dummy-credentials.json',
-                'dummy-config.yml',
-                'dummy-taxonomy.yml',
-                'dummy-schema.yml',
+                    'dummy-credentials.json',
+                    'dummy-config.yml',
+                    'dummy-taxonomy.yml',
+                    'dummy-schema.yml',
             ]:
                 dummy_src = os.path.join(TEST_DATA, dummy_file)
                 dummy_dst = os.path.join(tempdir, dummy_file)
@@ -288,7 +288,7 @@ class TestCore:
         # Given
         record = {
             'foo': 'd',
-            'resource_category': [1],
+            'resource_category': [1, 1],
             'waldo': ''
         }
         taxonomy = [

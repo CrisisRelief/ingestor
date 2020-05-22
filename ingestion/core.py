@@ -186,9 +186,13 @@ def xform_cats_drupal_taxonomy(taxonomy, taxonomy_ids_field):
         for taxonomy_id in taxonomy_ids:
             for key, value in additions[int(taxonomy_id)].items():
                 if key in updates:
-                    updates[key] += f', {value}'
+                    updates[key].add(value)
                 else:
-                    updates[key] = value
+                    updates[key] = {value}
+        updates = {
+            key: ', '.join(value)
+            for key, value in updates.items()
+        }
         record.update(updates)
         return record
 
