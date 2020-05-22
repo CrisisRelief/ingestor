@@ -301,8 +301,8 @@ class TestCore:
         expected = record.copy()
         expected.update(
             category='grault',
-            category_sub='fred',
-            category_sub_sub='corge',
+            subcategory_1='fred',
+            subcategory_2='corge',
         )
 
         # When

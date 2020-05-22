@@ -59,7 +59,8 @@ def parse_args(argv):
         '-f', '--output-format', default='json'
     )
     parser.add_argument(
-        '-p', '--partition', default=None, type=int, help="split the output into files with max p records"
+        '-p', '--partition', default=None, type=int,
+        help="split the output into files with max p records"
     )
     parser.add_argument(
         '-n', '--name', default='ingestion')
@@ -253,6 +254,36 @@ def append_output(transformed, out_file, out_fmt, primary_key_field, fieldnames=
     write_output(list(primary_key_map.values()), out_file, out_fmt, fieldnames)
 
 
+def do_output(transformed, args, conf):
+    if args.append_output:
+        append_output(
+            transformed, args.output_file, args.output_format,
+            primary_key_field=conf['primary_key_field'],
+            fieldnames=conf['schema_mapping'].keys()
+        )
+    elif args.partition:
+        out_file_prefix, out_file_ext = splitext(args.output_file)
+        if not out_file_ext:
+            raise UserWarning(f"can't chunk file {args.output_file}")
+        chunks = [
+            transformed[i:i+args.partition]
+            for i in range(0, len(transformed), args.partition)
+        ]
+        chunk_digits = math.ceil(math.log(len(chunks), 10))
+        for chunk_idx, chunk in enumerate(chunks):
+            chunk_file = f'{out_file_prefix}-{str(chunk_idx).zfill(chunk_digits)}.{out_file_ext}'
+            write_output(
+                chunk, chunk_file, args.output_format,
+                fieldnames=conf['schema_mapping'].keys(),
+            )
+
+    else:
+        write_output(
+            transformed, args.output_file, args.output_format,
+            fieldnames=conf['schema_mapping'].keys(),
+        )
+
+
 def main(args):
     epprint(vars(args))
     conf = parse_config(args.config_file, args.schema_file, args.taxonomy_file)
@@ -286,33 +317,7 @@ def main(args):
         eprint("no data")
         sys.exit(0)
 
-    if args.append_output:
-        append_output(
-            transformed, args.output_file, args.output_format,
-            primary_key_field=conf['primary_key_field'],
-            fieldnames=conf['schema_mapping'].keys()
-        )
-    elif args.partition:
-        out_file_prefix, out_file_ext = splitext(args.output_file)
-        if not out_file_ext:
-            raise UserWarning(f"can't chunk file {args.output_file}")
-        chunks = [
-            transformed[i:i+args.partition]
-            for i in range(0, len(transformed), args.partition)
-        ]
-        chunk_digits = math.ceil(math.log(len(chunks), 10))
-        for chunk_idx, chunk in enumerate(chunks):
-            chunk_file = f'{out_file_prefix}-{str(chunk_idx).zfill(chunk_digits)}.{out_file_ext}'
-            write_output(
-                chunk, chunk_file, args.output_format,
-                fieldnames=conf['schema_mapping'].keys(),
-            )
-
-    else:
-        write_output(
-            transformed, args.output_file, args.output_format,
-            fieldnames=conf['schema_mapping'].keys(),
-        )
+    do_output(transformed, args, conf)
 
 
 if __name__ == "__main__":
