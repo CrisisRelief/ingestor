@@ -15,8 +15,12 @@ from .mod_dump import exit_if_no_mod, get_last_mod_time
 from .sheet import Sheet, authorize_creds
 
 
+def eprint(*args, **kwargs):
+    print(*args, **kwargs, file=sys.stderr)
+
+
 def epprint(*args, **kwargs):
-    print(pformat(*args, **kwargs), file=sys.stderr)
+    eprint(pformat(*args, **kwargs))
 
 
 def parse_config(config_file, schema_file, taxonomy_file):
@@ -78,7 +82,7 @@ def get_category_ids(record, taxonomy, taxonomy_fields):
             category_ids.add(category_id)
 
     if categories:
-        epprint(f"categories {categories} not in taxonomy {taxonomy.values()}")
+        eprint(f"categories {categories} not in taxonomy {taxonomy.values()}")
     return list(category_ids)
 
 
@@ -215,7 +219,7 @@ def write_output(transformed, out_file, out_fmt, fieldnames=None):
             writer.writerows(transformed)
         else:
             raise UserWarning(f'unknown output format: {out_fmt}')
-    print(f"wrote {len(transformed)} records", file=sys.stderr)
+    eprint(f"wrote {len(transformed)} records")
 
 
 def read_output(out_file, out_fmt):
@@ -272,7 +276,7 @@ def main(args):
         **xform_kwargs
     )
     if not transformed:
-        print("no data", file=sys.stderr)
+        eprint("no data")
         sys.exit(0)
 
     if args.append_output:
