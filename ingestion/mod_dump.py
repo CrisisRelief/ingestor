@@ -11,10 +11,12 @@ def get_mod_file(name):
 
 def get_last_mod_time(name):
     mod_file = get_mod_file(name)
+    result = None
     if os.path.isfile(mod_file):
         with open(mod_file) as stream:
-            return stream.readline().rstrip('\n')
-    return None
+            result = stream.readline().rstrip('\n')
+    print(f"last mod str: {result} ({mod_file})", file=stderr)
+    return result
 
 
 def dump_this_mod_time(name, modtime_str):
@@ -24,9 +26,7 @@ def dump_this_mod_time(name, modtime_str):
 
 
 def mod_since_last_run(name, current_mod_str):
-    print("current mod str", current_mod_str, file=stderr)
-    last_mod_str = get_last_mod_time(name)
-    print("last mod str", last_mod_str, file=stderr)
+    print(f"current mod str: {current_mod_str}", file=stderr)
     return current_mod_str != get_last_mod_time(name)
 
 
