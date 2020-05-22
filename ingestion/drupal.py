@@ -53,11 +53,13 @@ class Drupal:
         return the `data` attribute from each sid in `sids` for the form `form_id`.
         """
 
-        rows = [
-            self.session.get(
-                f'{self.base_url}webform_rest/{form_id}/submission/{sid}').json()['data']
-            for sid in sids
-        ]
+        rows = []
+        for sid in sids:
+            resp = self.session.get(f'{self.base_url}webform_rest/{form_id}/submission/{sid}')
+            resp_json = resp.json()
+            row = resp_json['data']
+            row.update({'uuid': resp_json['entity']['uuid'][0]['value']})
+            rows.append(row)
         return pd.DataFrame(rows)
 
     def get_taxonomy_terms(self, taxonomy_vocab):
