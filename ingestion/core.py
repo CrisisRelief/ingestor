@@ -60,7 +60,7 @@ def parse_args(argv):
     parser.add_argument(
         '-n', '--name', default='ingestion')
     parser.add_argument(
-        '-L', '--limit')
+        '-L', '--limit', type=int)
 
     return parser.parse_args(argv)
 
@@ -131,7 +131,7 @@ def get_df_gsheets(conf, creds_file, name):
                      axis=0)
 
 
-def get_df_drupal(conf, creds_file, name):
+def get_df_drupal(conf, creds_file, name, limit=None):
     with open(creds_file) as stream:
         creds = yaml.safe_load(stream)
     drupal = Drupal(
@@ -162,6 +162,9 @@ def get_df_drupal(conf, creds_file, name):
         ]
     else:
         new_entries = sid_modtimes.keys()
+
+    if limit:
+        new_entries = list(new_entries)[:limit]
     return drupal.get_form_entries_df(conf['form_id'], new_entries)
 
 
@@ -262,7 +265,7 @@ def main(args):
             }
         )
     elif args.input_source == 'drupal':
-        aggregate = get_df_drupal(conf, args.creds_file, args.name)
+        aggregate = get_df_drupal(conf, args.creds_file, args.name, args.limit)
         xform_kwargs.update(xform_extras=[
             xform_cats_drupal_taxonomy(conf.get('taxonomy'), conf.get('taxonomy_ids_field'))
         ])
