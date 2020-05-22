@@ -12,7 +12,7 @@ install_reqs:
 lint:
 	flake8
 	yamllint .
-	pylint ingestion
+	pylint --rcfile=setup.cfg ingestion
 
 test:
 	py.test --verbose --color=yes tests
