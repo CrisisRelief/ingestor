@@ -215,6 +215,7 @@ def write_output(transformed, out_file, out_fmt, fieldnames=None):
             writer.writerows(transformed)
         else:
             raise UserWarning(f'unknown output format: {out_fmt}')
+    print(f"wrote {len(transformed)} records", file=sys.stderr)
 
 
 def read_output(out_file, out_fmt):
