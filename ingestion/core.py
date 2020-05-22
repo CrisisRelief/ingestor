@@ -2,6 +2,7 @@ import argparse
 import csv
 import json
 import sys
+from os.path import exists as path_exists
 from datetime import datetime
 from pprint import pformat
 
@@ -41,6 +42,10 @@ def parse_args(argv):
         '-t', '--taxonomy-file', default='taxonomy-drupal.yml')
     parser.add_argument(
         '-S', '--input-source', default='gsheet'
+    )
+    parser.add_argument(
+        '-a', '--append-output', default=False, action='store_true',
+        help="append to existing output file, updating records based on primary_key_field"
     )
     parser.add_argument(
         '-o', '--output-file', default='/dev/stdout',
@@ -199,6 +204,43 @@ def xform_cats_drupal_taxonomy(taxonomy, taxonomy_ids_field):
     return xform_cats_drupal
 
 
+def write_output(transformed, out_file, out_fmt, fieldnames=None):
+    with open(out_file, 'w') as stream:
+        if out_fmt == 'json':
+            json.dump(transformed, stream)
+        elif out_fmt == 'csv':
+            assert fieldnames, "fieldnames must be provided for CSV format"
+            writer = csv.DictWriter(stream, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(transformed)
+        else:
+            raise UserWarning(f'unknown output format: {out_fmt}')
+
+
+def read_output(out_file, out_fmt):
+    result = []
+    if path_exists(out_file):
+        with open(out_file) as stream:
+            if out_fmt == 'json':
+                result = json.load(stream)
+            elif out_fmt == 'csv':
+                result = csv.DictReader(stream)
+            else:
+                raise UserWarning(f'unknown output format: {out_fmt}')
+    return result
+
+
+def append_output(transformed, out_file, out_fmt, primary_key_field, fieldnames=None):
+    existing_data = read_output(out_file, out_fmt)
+    primary_key_map = {
+        record[primary_key_field]: record
+        for record in existing_data
+    }
+    for record in transformed:
+        primary_key_map[record[primary_key_field]] = record
+    write_output(list(primary_key_map.values()), out_file, out_fmt, fieldnames)
+
+
 def main(args):
     epprint(vars(args))
     conf = parse_config(args.config_file, args.schema_file, args.taxonomy_file)
@@ -229,16 +271,20 @@ def main(args):
         **xform_kwargs
     )
     if not transformed:
-        raise UserWarning("no data")
+        print("no data", file=sys.stderr)
+        sys.exit(0)
 
-    if args.output_format == 'json':
-        with open(args.output_file, 'w') as stream:
-            json.dump(transformed, stream)
-    elif args.output_format == 'csv':
-        with open(args.output_file, 'w') as stream:
-            writer = csv.DictWriter(stream, fieldnames=conf['schema_mapping'].keys())
-            writer.writeheader()
-            writer.writerows(transformed)
+    if args.append_output:
+        append_output(
+            transformed, args.output_file, args.output_format,
+            primary_key_field=conf['primary_key_field'],
+            fieldnames=conf['schema_mapping'].keys()
+        )
+    else:
+        write_output(
+            transformed, args.output_file, args.output_format,
+            fieldnames=conf['schema_mapping'].keys(),
+        )
 
 
 if __name__ == "__main__":

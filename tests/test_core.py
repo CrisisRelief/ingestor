@@ -18,7 +18,8 @@ try:
     sys.path.append(REPO_ROOT)
 
     from ingestion.core import (parse_args, parse_config, xform_df_pre_output,
-                                get_category_ids, main, xform_cats_drupal_taxonomy)
+                                get_category_ids, main, xform_cats_drupal_taxonomy, append_output,
+                                write_output, read_output)
 finally:
     sys.path = PATH
 
@@ -247,10 +248,10 @@ class TestCore:
 
             # Given
             for dummy_file in [
-                'dummy-credentials.json',
-                'dummy-config.yml',
-                'dummy-taxonomy.yml',
-                'dummy-schema.yml',
+                    'dummy-credentials.json',
+                    'dummy-config.yml',
+                    'dummy-taxonomy.yml',
+                    'dummy-schema.yml',
             ]:
                 dummy_src = os.path.join(TEST_DATA, dummy_file)
                 dummy_dst = os.path.join(tempdir, dummy_file)
@@ -309,3 +310,40 @@ class TestCore:
 
         # Then
         assert sorted(result.items()) == sorted(expected.items())
+
+    def test_append_output_json(self):
+        with \
+                tempfile.TemporaryDirectory() as tempdir, \
+                ChDir(tempdir):
+
+            # Given
+            existing_data = [
+                {
+                    'id': 'foo',
+                    'value': 'bar'
+                },
+                {
+                    'id': 'baz',
+                    'value': 'qux'
+                },
+            ]
+            new_data = [{'id': 'baz', 'value': 'quux'}]
+            expected_data = [
+                {
+                    'id': 'foo',
+                    'value': 'bar'
+                },
+                {
+                    'id': 'baz',
+                    'value': 'quux'
+                },
+            ]
+            out_fmt = 'json'
+            out_file = os.path.join(tempdir, 'out.json')
+            write_output(existing_data, out_file, out_fmt)
+
+            # When
+            append_output(new_data, out_file, 'json', 'id')
+
+            # Then
+            assert expected_data == read_output(out_file, out_fmt)
